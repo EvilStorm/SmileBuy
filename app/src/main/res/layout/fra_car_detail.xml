@@ -1,0 +1,548 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:scrollbarStyle="outsideOverlay"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingTop="18dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/bg_message_white"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.percent.PercentFrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/pictureSlider"
+                            app:layout_aspectRatio="192%"
+                            app:layout_widthPercent="100%" />
+
+                    </android.support.percent.PercentFrameLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/photocard_gradation" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/back_70"
+                        android:orientation="horizontal"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp">
+
+                        <TextView
+                            android:id="@+id/name"
+                            fontPath="fonts/NotoBold.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_55" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <com.autofactory.smilebuy.component.PageIndicateTextView
+                            android:id="@+id/pictureIndicator"
+                            fontPath="fonts/ArialBold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_50" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/smileBuy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/button_trans"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:src="@drawable/icon_cartype_01" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            fontPath="fonts/ArialBlack.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_70" />
+
+                        <TextView
+                            fontPath="fonts/NotoBold.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/unit_price"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_70" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/icon_tag_mark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/area"
+                                fontPath="fonts/NotoBold.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/car_detail_tag_h"
+                                android:layout_marginRight="6dp"
+                                android:background="@drawable/tag_light"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="테스트"
+                                android:textColor="@color/text_66"
+                                android:textSize="@dimen/text_50" />
+
+                            <TextView
+                                android:id="@+id/carNum"
+                                fontPath="fonts/NotoBold.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/car_detail_tag_h"
+                                android:layout_marginRight="6dp"
+                                android:background="@drawable/tag_light"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="테스트"
+                                android:textColor="@color/text_66"
+                                android:textSize="@dimen/text_50" />
+
+                            <TextView
+                                android:id="@+id/mileage"
+                                fontPath="fonts/NotoBold.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/car_detail_tag_h"
+                                android:layout_marginRight="6dp"
+                                android:background="@drawable/tag_deep"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="테스트"
+                                android:textColor="@color/text_66"
+                                android:textSize="@dimen/text_50" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/age"
+                                fontPath="fonts/NotoBold.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/car_detail_tag_h"
+                                android:layout_marginRight="6dp"
+                                android:background="@drawable/tag_deep"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="테스트"
+                                android:textColor="@color/text_66"
+                                android:textSize="@dimen/text_50" />
+
+                            <TextView
+                                android:id="@+id/fuelType"
+                                fontPath="fonts/NotoBold.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/car_detail_tag_h"
+                                android:layout_marginRight="6dp"
+                                android:background="@drawable/tag_deep"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="테스트"
+                                android:textColor="@color/text_66"
+                                android:textSize="@dimen/text_50" />
+
+                            <TextView
+                                android:id="@+id/transmissionType"
+                                fontPath="fonts/NotoBold.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/car_detail_tag_h"
+                                android:layout_marginRight="6dp"
+                                android:background="@drawable/tag_deep"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="테스트"
+                                android:textColor="@color/text_66"
+                                android:textSize="@dimen/text_50" />
+
+                            <TextView
+                                android:id="@+id/engine"
+                                fontPath="fonts/NotoBold.otf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/car_detail_tag_h"
+                                android:layout_marginRight="6dp"
+                                android:background="@drawable/tag_deep"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="테스트"
+                                android:textColor="@color/text_66"
+                                android:textSize="@dimen/text_50" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/additionalLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_ce" />
+
+                <TextView
+                    android:id="@+id/additional"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_45" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/saleTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="-1dp"
+                android:src="@drawable/icon_sale_tag" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/samsungInsuarance"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_h"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_yellow"
+            android:includeFontPadding="false"
+            android:text="@string/action_samsung_insuarance"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_50" />
+
+        <FrameLayout
+            android:id="@+id/interviewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dark_gray">
+
+            <ImageButton
+                android:id="@+id/interviewButton"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:background="@null" />
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/subtitle_interview_section"
+                android:textColor="@color/text_ff"
+                android:textSize="@dimen/text_45" />
+
+            <ImageView
+                android:id="@+id/interviewArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/btn_close_white" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/interviewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_white"
+            android:orientation="vertical" />
+
+
+        <LinearLayout
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_h"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_orange" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="6dp"
+                        android:src="@drawable/icon_call" />
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/action_call"
+                        android:textColor="@color/text_ff"
+                        android:textSize="@dimen/text_50" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/sendSMS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_orange" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="6dp"
+                        android:src="@drawable/icon_message" />
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/action_sms"
+                        android:textColor="@color/text_ff"
+                        android:textSize="@dimen/text_50" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/smileManText"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/content_request_car_check"
+            android:textColor="@color/text_a2"
+            android:textSize="@dimen/text_50" />
+
+        <TextView
+            android:id="@+id/whatIsSmileMan"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:paddingRight="20dp"
+            android:text="@string/action_sell_info_smile_man"
+            android:textColor="@color/text_fe"
+            android:textSize="@dimen/text_50"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/requestSmileMan"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_h"
+            android:background="@drawable/button_yellow"
+            android:includeFontPadding="false"
+            android:text="@string/action_request_smileman"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_50" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_h"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_orange" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/commentImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="6dp"
+                        android:src="@drawable/icon_comment" />
+
+                    <TextView
+                        android:id="@+id/commentText"
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/title_activity_comment"
+                        android:textColor="@color/text_ff"
+                        android:textSize="@dimen/text_50" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/share"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_orange" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="6dp"
+                        android:src="@drawable/icon_send" />
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/action_share"
+                        android:textColor="@color/text_ff"
+                        android:textSize="@dimen/text_50" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

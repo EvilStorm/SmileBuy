@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/back_e5"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              tools:context="com.autofactory.smilebuy.ui.login.FindPwActivity"
+              tools:ignore="MissingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@drawable/top_bar">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/top_bar_button_h"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/button_trans"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_x"/>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_find_pw_result"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_72"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/successText"
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/gray_textbox"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="28dp"
+        android:text="@string/content_success_find_pw"
+        android:textColor="@color/text_a2"
+        android:textSize="@dimen/text_50"/>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@android:id/text1"
+    fontPath="fonts/NotoBold.otf"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/edit_text_h"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/white_textbox"
+    android:gravity="center_vertical"
+    android:paddingLeft="12dp"
+    android:textColor="@color/text_66"
+    android:textSize="@dimen/text_50"
+    tools:ignore="MissingPrefix"/>

@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top|center_horizontal"
+    android:background="@color/back_e5"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/photo_card">
+
+        <FrameLayout
+            app:layout_aspectRatio="136%"
+            app:layout_widthPercent="100%">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/sellGuide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+    </android.support.percent.PercentFrameLayout>
+
+
+    <GridView android:scrollbarStyle="outsideOverlay"
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center_horizontal"
+        android:horizontalSpacing="10dp"
+        android:listSelector="@drawable/button_trans"
+        android:numColumns="2"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_e5"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@drawable/top_bar">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/top_bar_button_h"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/button_trans"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/icon_top_before"/>
+
+        <TextView
+            android:id="@+id/title"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_my_request"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_72"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/noCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_car"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/text_user_profile_no_car"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+        </LinearLayout>
+
+        <GridView android:scrollbarStyle="outsideOverlay"
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center_horizontal"
+            android:horizontalSpacing="10dp"
+            android:numColumns="2"
+            android:paddingBottom="18dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="18dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"/>
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingPrefix"
+    android:background="@drawable/photo_card">
+
+    <ImageView
+        android:id="@+id/image"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_aspectRatio="100%"
+        app:layout_widthPercent="100%"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/back_70"
+        android:orientation="horizontal"
+        android:paddingBottom="0dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp">
+
+        <TextView
+            android:id="@+id/price"
+            fontPath="fonts/ArialBold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_78"/>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/unit_price"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_78"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/icon_cartype_01"/>
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:background="@drawable/button_trans"
+        android:padding="10dp"
+        android:src="@drawable/btn_delete"/>
+</android.support.percent.PercentFrameLayout>

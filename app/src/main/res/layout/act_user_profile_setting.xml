@@ -1,0 +1,225 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_e5"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:ignore="MissingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="51">
+
+        <ImageView
+            android:id="@+id/profileBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/top_bar_h"
+                android:background="@drawable/top_bar">
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="@dimen/top_bar_button_h"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/button_trans"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/icon_top_before"/>
+
+                <TextView
+                    android:id="@+id/title"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/title_user_profile"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_72"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/profile_gradation"/>
+
+                <android.support.percent.PercentFrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_gravity="center_horizontal|top"
+                        app:layout_aspectRatio="100%"
+                        app:layout_heightPercent="56%"
+                        app:layout_marginBottomPercent="6%"
+                        app:layout_marginTopPercent="13%">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/userPic"
+                            android:layout_width="122dp"
+                            android:layout_height="122dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/profile_photo_basic_big"
+                            android:scaleType="centerCrop"
+                            app:riv_border_color="@color/line_ff"
+                            app:riv_border_width="1px"
+                            app:riv_corner_radius="61dp"/>
+
+                        <ImageButton
+                            android:id="@+id/camera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|bottom"
+                            android:background="@drawable/button_trans"
+                            android:padding="6dp"
+                            android:src="@drawable/icon_camera"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/userID"
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/text_ff"
+                        android:textSize="@dimen/text_50"
+                        app:layout_marginTopPercent="75%"/>
+
+                </android.support.percent.PercentFrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/back_70"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/userCreatedAt"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_user_created_at"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_45"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="49"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/userName"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/gray_textbox"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_user_profile_name"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/userSaying"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/gray_textbox"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_user_profile_saying"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/phoneAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/checkbox_default"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:id="@+id/phoneAgreeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="35dp"
+                android:text="@string/text_user_profile_phone_agree"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

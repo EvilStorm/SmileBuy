@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/back_e5"
+              android:orientation="vertical"
+              tools:context=".ui.login.TermsActivity"
+              tools:ignore="MissingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h">
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_terms"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_72"/>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_66"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_service"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/agreeServiceText"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_agree"
+            android:textColor="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <CheckBox
+            android:id="@+id/agreeService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:button="@drawable/checkbox_default"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_textbox"
+        android:padding="8dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="18dp"
+            android:text="@string/terms_service"
+            android:textColor="@color/text_a2"
+            android:textSize="@dimen/text_45"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_private"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/agreePrivateText"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_agree"
+            android:textColor="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <CheckBox
+            android:id="@+id/agreePrivate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:button="@drawable/checkbox_default"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_textbox"
+        android:padding="8dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="18dp"
+            android:text="@string/terms_private_info"
+            android:textColor="@color/text_a2"
+            android:textSize="@dimen/text_45"/>
+    </ScrollView>
+
+    <TextView
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/text_all_agree"
+        android:textColor="@color/text_66"
+        android:textSize="@dimen/text_50"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/agreeAllText"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_agree"
+            android:textColor="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <CheckBox
+            android:id="@+id/agreeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:button="@drawable/checkbox_default"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_h"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/top_bar_h"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/button_yellow"
+        android:includeFontPadding="false"
+        android:text="@string/action_next"
+        android:textColor="@color/text_ff"
+        android:textSize="@dimen/text_50"/>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="library-3.2.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.navercorp.pulltorefresh/library/3.2.0/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.navercorp.pulltorefresh/library/3.2.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.navercorp.pulltorefresh/library/3.2.0/cebde58207de94ac3d436b9de827e96aecef2f17/library-3.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

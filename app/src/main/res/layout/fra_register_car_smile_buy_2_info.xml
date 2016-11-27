@@ -1,0 +1,921 @@
+<ScrollView android:scrollbarStyle="outsideOverlay" xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@color/back_e5"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/back_f1"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_pen"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/content_sell_smile_buy_info"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/text_sell_info_manager"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <TextView
+            android:id="@+id/managerInfo"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/smileman_info_textbox"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/text_sell_info_manager_info"
+            android:textColor="@color/text_fb"
+            android:textSize="@dimen/text_70"/>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/text_sell_info_default"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/name"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_sell_info_model_name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/carNum"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_sell_info_car_num"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <EditText
+                android:id="@+id/mileage"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@drawable/white_textbox"
+                android:gravity="center_vertical|left"
+                android:hint="@string/prompt_sell_info_mileage"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:text="@string/unit_km"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/ageYear"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_h"
+                    android:background="@drawable/white_textbox"
+                    android:gravity="center_vertical|left"
+                    android:hint="@string/prompt_sell_info_age_year"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_66"
+                    android:textColorHint="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/unit_year"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_50"/>
+            </FrameLayout>
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent"/>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/ageMonth"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_h"
+                    android:background="@drawable/white_textbox"
+                    android:gravity="center_vertical|left"
+                    android:hint="@string/prompt_sell_info_age_month"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_66"
+                    android:textColorHint="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/unit_month"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_50"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <Spinner
+                android:id="@+id/fuelType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@null"
+                android:singleLine="true"
+                android:spinnerMode="dialog"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_more"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <Spinner
+                android:id="@+id/transmissionType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@null"
+                android:singleLine="true"
+                android:spinnerMode="dialog"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_more"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <EditText
+                android:id="@+id/engine"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@drawable/white_textbox"
+                android:gravity="center_vertical|left"
+                android:hint="@string/prompt_sell_info_engine"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:text="@string/unit_engine"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+        </FrameLayout>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/text_sell_info_checkbox"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@string/text_sell_info_sunroof"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sunroofY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/sunroofN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_not_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@string/text_sell_info_smart_key"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/smartKeyY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/smartKeyN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_not_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@string/text_sell_info_black_box"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/blackBoxY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/blackBoxN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_not_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@string/text_sell_info_rear_camera"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rearCameraY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/rearCameraN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_not_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@string/text_sell_info_navigation"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/navigationY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/navigationN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_not_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@string/text_sell_info_caffein"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/caffeinY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/caffeinN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/checkbox_default"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="35dp"
+                        android:text="@string/radio_button_not_exist"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_50"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/text_sell_info_accident"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/accident"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:ems="100"
+            android:gravity="top|left"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:text="@string/text_sell_info_predicted_price"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/predictedPrice"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:ems="100"
+            android:gravity="top|left"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:text="@string/text_sell_info_manager_comment"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/managerComment"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:ems="100"
+            android:gravity="top|left"
+            android:hint="@string/prompt_sell_info_manager_comment"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
+

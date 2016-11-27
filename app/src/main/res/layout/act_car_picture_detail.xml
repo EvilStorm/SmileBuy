@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/back_00"
+             tools:context="com.autofactory.smilebuy.ui.main.car.detail.CarPictureDetailActivity">
+
+
+    <com.autofactory.smilebuy.component.ViewPagerForPhoto
+        android:id="@+id/pictureSlider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.autofactory.smilebuy.component.PageIndicateTextView
+        android:id="@+id/pictureIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="8dp"/>
+
+
+    <FrameLayout
+        android:layout_width="@dimen/top_bar_button_h"
+        android:layout_height="@dimen/top_bar_button_h"
+        android:layout_gravity="left|top">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_trans"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/icon_top_before"/>
+    </FrameLayout>
+
+</FrameLayout>

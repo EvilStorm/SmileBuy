@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-recyclerview-v7-23.3.0_52cb9286ddc53575a64072e0d8cfa3b9302dbd14.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/internal_impl-23.3.0_401d70f3e8ba00445f63c8155c43d3eaf79289fd.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="814fc0c3ec69a944add398217d90077301501a74">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.makeramen-roundedimageview-2.2.1_33c91456fb9fb198ce80291dd135f45a43182f3f.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-23.3.0_87d07919e75043ccb7b041365a7ef1bb611f4c66.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.6/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9af3b9b8114e685291aa00e6572b0a9131244956">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-answers-1.3.6_ca4504a6ec388326188a7bcea49d5625d1f5141b.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.navercorp.pulltorefresh/library/3.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e81a90331089d2f9018e493b0fdd6bab92fae40c">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.navercorp.pulltorefresh-library-3.2.0_e1596b0db7d85d6b80715573a5923c98a967ca01.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/org.lucasr.twowayview/twowayview/0.1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/org.lucasr.twowayview-twowayview-0.1.4_f8b11990604cea9258e7b15560dde8909b4e0048.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/support-annotations-23.3.0_502726471de4465240fd2332438f1b95dd056399.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.0/a7537446a030da8eb0da4c71424d16c2589f6c4a/glide-3.6.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/glide-3.6.0_34a850742a6587a8f7c2da5a69c9e596d18325e3.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/jackson-annotations-2.2.2_4e8fb963d7f35b4c6aaac548a1e5a0a7591fac78.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-basement-8.4.0_049ddb934633a382dc00c1760cc491a099b0fded.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.8/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c9ef45dcbd082cd63aac09a5e2cd443adb5df837">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-crashlytics-core-2.3.8_e4a29304f132cdea0b1422307ac7dbb3e3d278a4.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ad5bb101ced4d3939225c9b57e5a3d81547c1fbb">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-beta-1.1.4_2313dc8727a321cd1a9e812ebd846c19514f7ca5.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-design-23.3.0_3d90987dc0ea3b780a6d5cf14d1e0ca7b59b5ea4.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-measurement-8.4.0_01540b7f90133e400181e105aa3a91181f0e7af2.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.melnykov/floatingactionbutton/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8c6ebb7d087d1a30bf84356bd2aecf85309fc024">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.melnykov-floatingactionbutton-1.3.0_f3b9e45dabd37c9d1676e326b780df3587105583.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/jackson-databind-2.2.2_2937e15d34b8032057d0e139cdb00cd1a65bc694.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.commit451/PhotoView/1.2.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="890be6e1e56a883c9b407a11e067a61886dec123">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.commit451-PhotoView-1.2.4_105431723099fb0fc1c4e28ccecd8656cebac8ad.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-23.3.0_4519a7d9b2433dce8b9c945c0a4e1a4f154981d5.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/percent/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de44758258139805d12d5d023b04f58e2010dacc">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-percent-23.3.0_3b36c8ca381ba88133a25d178bd48be815340304.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.5.5/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="611605b6b640c1558f9bdea41de8ff837ab68ca8">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-crashlytics-2.5.5_f176d5921457d72886c9aea0211991d7edaae0cd.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.github.ParkSangGwon/TedPermission/v1.0.8/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="14e7bbfac64eed16949bc40146218dfc315c5a05">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.github.ParkSangGwon-TedPermission-v1.0.8_e7a5e40db4b9504eaf2d46106a0a24d280bfed22.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-analytics-8.4.0_404528551d93ec93a807bac6b439bd91a5e7c2f8.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.facebook.android-facebook-android-sdk-4.6.0_250879c87d2a1b94f6a209c8f1f8d3b86358f7cd.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/library-2.4.0_3e449f105225e5a408042672be052fa667321097.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.10/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a5db9a2dd46d84285ef737f65030b74b6e8ee2a4">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/io.fabric.sdk.android-fabric-1.3.10_13b558aee60bb6f1167c52b8b7f1682be17e5642.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/jackson-core-2.2.2_22048ddbeb5df216bdb11c36e7588cfefb8f1ca6.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-23.3.0_b46469d1d9a09ee2c567dd08495a22816b729632.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.navercorp.volleyextensions/volleyer/2.0.0/b99d1aa16ba8f3d30e41ae270707b38ceea4f31a/volleyer-2.0.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="b99d1aa16ba8f3d30e41ae270707b38ceea4f31a">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/volleyer-2.0.0_1de5a7aab8d60eea2501f6c5ecbffaaa1f2a9407.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/uk.co.chrisjenx/calligraphy/2.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/uk.co.chrisjenx-calligraphy-2.1.0_65329c204ab7d8418c1cd8b6670407f6e62ba689.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/bolts-android-1.2.0_9d783f04bd63495a54e71eb5d2419acc275e3845.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/library-1.0.19_edbaf428fce2af9e977ae87d9397e527c5303611.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-23.3.0_707ca6a64e16d411a8219d843135bfd29f943196.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/me.iwf.photopicker/PhotoPicker/0.2.9/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="82a2a700e50e450944ce26f31ae9fbebaf53d7eb">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/me.iwf.photopicker-PhotoPicker-0.2.9_821e4ae77be9104d889d6d01225036af8c699865.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/libs/libphonenumber-7.2.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="25574f7461320bba7f4c16a4345e011a37daa597">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/libphonenumber-7.2.3_933fabb1bc174a1e33b899b340df1fceac4c8e3f.jar" />
+    </item>
+    <item
+        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.squareup/otto/1.3.7/69d90fd7fb70e54746e26c10454c220e40a775ce/otto-1.3.7.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/otto-1.3.7_eefab42f20e5abcdd47d834aaead9a061f13dbfb.jar" />
+    </item>
+
+</items>

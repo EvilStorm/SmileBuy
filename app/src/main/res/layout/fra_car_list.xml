@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_e5"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.autofactory.smilebuy.ui.main.car.list.CarListFragment"
+    tools:ignore="MissingPrefix">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@drawable/top_bar">
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_car_list"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_72"/>
+
+        <ImageButton
+            android:id="@+id/eventButton"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/event_icon"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_textbox"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_search_car"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <ImageButton
+            android:id="@+id/filter"
+            android:layout_width="@dimen/button_h"
+            android:layout_height="@dimen/button_h"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/button_filter_off"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/grid"
+            android:dividerPadding="10dp"
+            android:listSelector="@drawable/button_trans"
+            ptr:ptrMode="google"/>
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/sell"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_margin="6dp"-->
+        <!--android:src="@drawable/ic_add_white_18dp"-->
+        <!--app:backgroundTint="#32c498"/>-->
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/question_btn"
+            fab:fab_colorNormal="#f16529"
+            fab:fab_shadow="true"/>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/txt3_ic_add_white_36dp"
+            fab:fab_colorNormal="@color/back_fe"
+            fab:fab_shadow="true"/>
+
+    </FrameLayout>
+</LinearLayout>

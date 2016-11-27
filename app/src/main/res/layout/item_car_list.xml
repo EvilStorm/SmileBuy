@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="8dp"
+    android:paddingTop="9dp"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/photo_card"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.percent.PercentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/mainImage"
+                    android:scaleType="centerCrop"
+                    app:layout_aspectRatio="192%"
+                    app:layout_widthPercent="100%"/>
+            </android.support.percent.PercentFrameLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/photocard_gradation"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_gravity="bottom"
+                android:background="@color/back_70"
+                android:orientation="horizontal"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/userName"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="75dp"
+                    android:maxLines="1"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_50"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/button_trans"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/icon_heart"/>
+
+                <TextView
+                    android:id="@+id/favoriteCount"
+                    fontPath="fonts/ArialBold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_50"/>
+
+                <ImageButton
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/button_trans"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/icon_comment"/>
+
+                <TextView
+                    android:id="@+id/commentCount"
+                    fontPath="fonts/ArialBold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_50"/>
+
+                <ImageButton
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/button_trans"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/icon_send"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/smileBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/button_trans"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:src="@drawable/icon_cartype_01"/>
+
+                <TextView
+                    android:id="@+id/price"
+                    fontPath="fonts/ArialBlack.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_70"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/unit_price"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_70"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    fontPath="fonts/ArialBold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_55"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/back_48"
+            android:minHeight="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="78dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/ArialBlack.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Q1"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_60"/>
+
+                <TextView
+                    android:id="@+id/question"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_48"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/triangle"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="87dp"
+            android:layout_marginRight="20dp"
+            android:minHeight="47dp"
+            android:orientation="horizontal"
+            android:paddingTop="6dp">
+
+            <TextView
+                fontPath="fonts/ArialBlack.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:gravity="top"
+                android:text="A"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_60"/>
+
+            <TextView
+                android:id="@+id/answer"
+                fontPath="fonts/NotoReg.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_48"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="52dp"
+        android:layout_marginLeft="12dp">
+
+        <ImageButton
+            android:id="@+id/userSelect"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/button_trans"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userPic"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/profile_photo_basic"
+            android:scaleType="centerCrop"
+            app:riv_border_color="@color/line_ff"
+            app:riv_border_width="1px"
+            app:riv_corner_radius="27dp"/>
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/saleTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/icon_sale_tag"/>
+
+    <TextView
+        android:id="@+id/carID"
+        fontPath="fonts/NotoReg.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="10"
+        android:textColor="@color/text_fb"
+        android:textSize="@dimen/text_60"
+        android:textStyle="bold"/>
+</FrameLayout>

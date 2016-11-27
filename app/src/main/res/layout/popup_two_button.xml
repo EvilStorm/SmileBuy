@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginLeft="12dp"
+              android:layout_marginRight="12dp"
+              android:orientation="vertical"
+              tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/title"
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@color/back_fe"
+        android:gravity="center"
+        android:textColor="@color/text_ff"
+        android:textSize="@dimen/text_72"/>
+
+    <TextView
+        android:id="@+id/message"
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/back_ff"
+        android:gravity="center"
+        android:minHeight="122dp"
+        android:padding="12dp"
+        android:textColor="@color/text_66"
+        android:textSize="@dimen/text_50"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/back_e5">
+
+        <Button
+            android:id="@+id/twoButton"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_h"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_yellow"
+            android:includeFontPadding="false"
+            android:text="@string/action_no"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_50"/>
+
+        <Button
+            android:id="@+id/oneButton"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_h"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_yellow"
+            android:includeFontPadding="false"
+            android:text="@string/action_yes"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_50"/>
+    </LinearLayout>
+
+</LinearLayout>

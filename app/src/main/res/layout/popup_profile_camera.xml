@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginLeft="12dp"
+              android:layout_marginRight="12dp"
+              android:background="@color/back_ff"
+              android:orientation="vertical"
+              tools:ignore="MissingPrefix">
+
+    <TextView
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@color/back_fe"
+        android:gravity="center"
+        android:text="@string/popup_camera_title"
+        android:textColor="@color/text_ff"
+        android:textSize="@dimen/text_72"/>
+
+    <Button
+        android:id="@+id/upload"
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_h"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/button_yellow"
+        android:includeFontPadding="false"
+        android:text="@string/popup_camera_upload"
+        android:textColor="@color/text_ff"
+        android:textSize="@dimen/text_50"/>
+    <Button
+        android:id="@+id/delete"
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_h"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/button_yellow"
+        android:includeFontPadding="false"
+        android:text="@string/popup_camera_delete"
+        android:textColor="@color/text_ff"
+        android:textSize="@dimen/text_50"/>
+    <Button
+        android:id="@+id/cancel"
+        fontPath="fonts/NotoBold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_h"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/button_yellow"
+        android:includeFontPadding="false"
+        android:text="@string/popup_camera_cancel"
+        android:textColor="@color/text_ff"
+        android:textSize="@dimen/text_50"/>
+
+</LinearLayout>

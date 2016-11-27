@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activity_slide_duration">300</integer>
+
+
+    <dimen name="top_bar_h">48dp</dimen>
+    <dimen name="top_bar_margin">53dp</dimen>
+    <dimen name="top_bar_button_h">53dp</dimen>
+    <dimen name="button_h">46dp</dimen>
+    <dimen name="edit_text_h">46dp</dimen>
+    <dimen name="car_detail_tag_h">24dp</dimen>
+
+    <!-- TEXT -->
+    <dimen name="text_78">20dp</dimen>
+    <dimen name="text_72">18dp</dimen>
+    <dimen name="text_70">17dp</dimen>
+    <dimen name="text_60">15dp</dimen>
+    <dimen name="text_55">14dp</dimen>
+    <dimen name="text_50">13dp</dimen>
+    <dimen name="text_48">12dp</dimen>
+    <dimen name="text_45">11dp</dimen>
+    <dimen name="text_40">10dp</dimen>
+
+    <color name="text_66">#666666</color>
+    <color name="text_a2">#a2a2a2</color>
+    <color name="text_ff">#ffffff</color>
+    <color name="text_fb">#fb5240</color>
+    <color name="text_fe">#fec629</color>
+
+    <!-- OTHER COLOR -->
+    <color name="back_00">#000000</color>
+    <color name="back_70">#b3000000</color>
+    <color name="back_60">#99000000</color>
+    <color name="back_30">#4d000000</color>
+    <color name="back_48">#484848</color>
+    <color name="back_e5">#e5e5e5</color>
+    <color name="back_f1">#f1f1f1</color>
+    <color name="back_ff">#ffffff</color>
+    <color name="back_fe">#fec629</color>
+    <color name="back_f7">#f7f7f7</color>
+    <color name="back_c6">#c6c6c6</color>
+
+    <color name="line_66">#666666</color>
+    <color name="line_ce">#cecece</color>
+    <color name="line_ff">#ffffff</color>
+    <color name="line_8e">#8e8e8e</color>
+    <color name="line_fb">#fb5240</color>
+    
+    <color name="cell_yellow">#efc53e</color>
+    <color name="cell_yellow_n">#f2cf5e</color>
+
+    <color name="button_trans">#00ffffff</color>
+    <color name="button_trans_n">#4dffffff</color>
+    <color name="button_trans_off">#4d000000</color>
+    <color name="button_trans_dark_n">#4dbcbcbc</color>
+
+    <integer name="price_min">0</integer>
+    <integer name="price_max">28</integer>
+
+    <integer name="mileage_min">0</integer>
+    <integer name="mileage_max">20</integer>
+</resources>

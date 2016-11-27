@@ -1,0 +1,574 @@
+<ScrollView android:scrollbarStyle="outsideOverlay" xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@color/back_e5"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/back_f1"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_pen"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/content_sell_info"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/subtitle_sell_compulsory_info"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/name"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_sell_info_name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/carNum"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_sell_info_car_num"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+        <EditText
+            android:id="@+id/phoneNum"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_h"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:gravity="center_vertical|left"
+            android:hint="@string/prompt_sell_info_phone_num"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <EditText
+                android:id="@+id/price"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@drawable/white_textbox"
+                android:gravity="center_vertical|left"
+                android:hint="@string/prompt_sell_info_price"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:text="@string/unit_price"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <Spinner
+                android:id="@+id/area"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@null"
+                android:singleLine="true"
+                android:spinnerMode="dialog"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_more"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/forUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/text_sell_request_smilebuy_free"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <Button
+                android:id="@+id/requestSmileMan"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_h"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/button_yellow"
+                android:includeFontPadding="false"
+                android:text="@string/action_sell_request_smilebuy_free"
+                android:textColor="@color/text_ff"
+                android:textSize="@dimen/text_50"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/text_sell_can_smile_buy"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <CheckBox
+                    android:id="@+id/canSmileMan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:button="@drawable/checkbox_default"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/whatIsSmileMan"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:clickable="true"
+                android:gravity="center_vertical|left"
+                android:paddingRight="20dp"
+                android:text="@string/action_sell_info_smile_man"
+                android:textColor="@color/text_fe"
+                android:textSize="@dimen/text_50"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/forManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <CheckBox
+                android:id="@+id/alliance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@drawable/checkbox_default"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="35dp"
+                android:text="@string/text_sell_info_alliance"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+
+            <CheckBox
+                android:id="@+id/commission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@drawable/checkbox_default"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="38dp"
+                android:text="@string/text_sell_info_commission"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/subtitle_sell_optional_info"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <EditText
+                android:id="@+id/mileage"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@drawable/white_textbox"
+                android:gravity="center_vertical|left"
+                android:hint="@string/prompt_sell_info_mileage"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:text="@string/unit_km"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/ageYear"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_h"
+                    android:background="@drawable/white_textbox"
+                    android:gravity="center_vertical|left"
+                    android:hint="@string/prompt_sell_info_age_year"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_66"
+                    android:textColorHint="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/unit_year"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_50"/>
+            </FrameLayout>
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent"/>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/ageMonth"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_h"
+                    android:background="@drawable/white_textbox"
+                    android:gravity="center_vertical|left"
+                    android:hint="@string/prompt_sell_info_age_month"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_66"
+                    android:textColorHint="@color/text_a2"
+                    android:textSize="@dimen/text_50"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/unit_month"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_50"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <Spinner
+                android:id="@+id/fuelType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@null"
+                android:singleLine="true"
+                android:spinnerMode="dialog"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_more"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <Spinner
+                android:id="@+id/transmissionType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@null"
+                android:singleLine="true"
+                android:spinnerMode="dialog"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_more"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <EditText
+                android:id="@+id/engine"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@drawable/white_textbox"
+                android:gravity="center_vertical|left"
+                android:hint="@string/prompt_sell_info_engine"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:text="@string/unit_engine"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_50"/>
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/additional"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_textbox"
+            android:ems="100"
+            android:gravity="top|left"
+            android:hint="@string/prompt_sell_info_additional"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:singleLine="true"
+            android:textColor="@color/text_66"
+            android:textColorHint="@color/text_a2"
+            android:textSize="@dimen/text_50"/>
+
+    </LinearLayout>
+
+</ScrollView>

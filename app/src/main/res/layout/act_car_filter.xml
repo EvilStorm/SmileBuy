@@ -1,0 +1,540 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_ff"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@drawable/top_bar">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/top_bar_button_h"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/button_trans"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_x"/>
+
+        <TextView
+            android:id="@+id/title"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_car_filter"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_72"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/subtitle_car_filter_sort"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/sortButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_trans"
+                    android:src="@drawable/icon_sell_1_n"/>
+
+                <TextView
+                    android:id="@+id/sortText1"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/action_sort_all"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_40"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/sortButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_trans"
+                    android:src="@drawable/icon_sell_2_n"/>
+
+                <TextView
+                    android:id="@+id/sortText2"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/action_sort_smilebuy"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_40"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageButton
+                    android:id="@+id/sortButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_trans"
+                    android:src="@drawable/icon_sell_3_n"/>
+
+                <TextView
+                    android:id="@+id/sortText3"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/action_sort_alliance"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_40"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageButton
+                    android:id="@+id/sortButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_trans"
+                    android:src="@drawable/icon_sell_4_n"/>
+
+                <TextView
+                    android:id="@+id/sortText4"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/action_sort_commission"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_40"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageButton
+                    android:id="@+id/sortButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_trans"
+                    android:enabled="false"
+                    android:src="@drawable/icon_sell_5_n"/>
+
+                <TextView
+                    android:id="@+id/sortText5"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/action_sort_friend"
+                    android:textColor="@color/text_a2"
+                    android:textSize="@dimen/text_40"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/subtitle_car_filter_price"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/priceMinBalloon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textballoon_3"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp">
+
+                    <TextView
+                        android:id="@+id/priceMin"
+                        fontPath="fonts/ArialBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                    <TextView
+                        android:id="@+id/priceMinUnit"
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/priceMaxBalloon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textballoon_3"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp">
+
+                    <TextView
+                        android:id="@+id/priceMax"
+                        fontPath="fonts/ArialBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                    <TextView
+                        android:id="@+id/priceMaxUnit"
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.autofactory.smilebuy.component.RangeSeekBar
+                android:id="@+id/priceBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:absoluteMaxValue="@integer/price_max"
+                app:absoluteMinValue="@integer/price_min"
+                app:internalPadding="12dp"
+                app:valuesAboveThumbs="false"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/text_car_filter_price_unit"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_40"/>
+
+        </LinearLayout>
+
+        <TextView
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/subtitle_car_filter_mileage"
+            android:textColor="@color/text_66"
+            android:textSize="@dimen/text_50"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/mileageMinBalloon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textballoon_3"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp">
+
+                    <TextView
+                        android:id="@+id/mileageMin"
+                        fontPath="fonts/ArialBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                    <TextView
+                        android:id="@+id/mileageMinUnit"
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mileageMaxBalloon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textballoon_3"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp">
+
+                    <TextView
+                        android:id="@+id/mileageMax"
+                        fontPath="fonts/ArialBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                    <TextView
+                        android:id="@+id/mileageMaxUnit"
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_40"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.autofactory.smilebuy.component.RangeSeekBar
+                android:id="@+id/mileageBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:absoluteMaxValue="@integer/mileage_max"
+                app:absoluteMinValue="@integer/mileage_min"
+                app:internalPadding="12dp"
+                app:valuesAboveThumbs="false"/>
+
+            <TextView
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/text_car_filter_mileage_unit"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_40"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp">
+
+            <Spinner
+                android:id="@+id/area"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_h"
+                android:background="@null"
+                android:singleLine="true"
+                android:spinnerMode="dialog"
+                android:textColor="@color/text_66"
+                android:textColorHint="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/icon_more"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@drawable/btn_bottom"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_trans"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/icon_bottom_standard"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/action_car_filter_default"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_72"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/bar_bottom_grid"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/apply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_trans"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/icon_bottom_filter"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/action_car_filter_apply"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_72"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

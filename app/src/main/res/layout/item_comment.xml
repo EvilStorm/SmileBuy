@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_ff"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="89dp"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginRight="12dp">
+
+                <ImageButton
+                    android:id="@+id/userSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_trans"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userPic"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/profile_photo_basic"
+                    android:scaleType="centerCrop"
+                    app:riv_border_color="@color/line_ff"
+                    app:riv_border_width="1px"/>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/userName"
+                        fontPath="fonts/NotoBold.otf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_66"
+                        android:textSize="@dimen/text_50"/>
+
+                    <TextView
+                        android:id="@+id/date"
+                        fontPath="fonts/ArialBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:maxLines="1"
+                        android:textColor="@color/text_a2"
+                        android:textSize="@dimen/text_40"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/content"
+                    fontPath="fonts/NotoReg.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/text_50"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                app:layout_aspectRatio="187%"
+                app:layout_widthPercent="100%"/>
+        </android.support.percent.PercentFrameLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:background="@drawable/button_trans"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="10dp"
+        android:src="@drawable/btn_delete"/>
+</FrameLayout>

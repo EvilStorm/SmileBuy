@@ -1,0 +1,435 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.autofactory.smilebuy.ui.main.car.list.CarListFragment"
+              tools:ignore="MissingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@drawable/top_bar">
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="@dimen/top_bar_button_h"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/button_trans"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_setting_title_bar"/>
+
+        <TextView
+            android:id="@+id/title"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_setting"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_72"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/settingBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back_60"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.percent.PercentFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/myProfile"
+                        android:background="@drawable/button_trans"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/btn_icon_profile"/>
+
+                        <TextView
+                            fontPath="fonts/NotoReg.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_my_account"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_50"/>
+                    </LinearLayout>
+
+                </android.support.percent.PercentFrameLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_8e"/>
+
+                <android.support.percent.PercentFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/myCar"
+                        android:background="@drawable/button_trans"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/btn_icon_mycar"/>
+
+                        <TextView
+                            fontPath="fonts/NotoReg.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_my_car"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_50"/>
+                    </LinearLayout>
+
+                </android.support.percent.PercentFrameLayout>
+
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_8e"/>
+
+                <android.support.percent.PercentFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/myFavorite"
+                        android:background="@drawable/button_trans"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/btn_icon_like_cabinet"/>
+
+                        <TextView
+                            fontPath="fonts/NotoReg.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_favorite"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_50"/>
+                    </LinearLayout>
+
+                </android.support.percent.PercentFrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_8e"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.percent.PercentFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/notice"
+                        android:background="@drawable/button_trans"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/btn_icon_announcement"/>
+
+                        <TextView
+                            fontPath="fonts/NotoReg.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_notice"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_50"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/line_8e"/>
+                </android.support.percent.PercentFrameLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_8e"/>
+
+                <android.support.percent.PercentFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/myRequest"
+                        android:background="@drawable/button_trans"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/btn_icon_car_result"/>
+
+                        <TextView
+                            fontPath="fonts/NotoReg.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_my_request"
+                            android:textColor="@color/text_ff"
+                            android:textSize="@dimen/text_50"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/line_8e"
+                        android:visibility="invisible"
+                        />
+
+                </android.support.percent.PercentFrameLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_8e"
+                    android:visibility="invisible"
+                    />
+
+                <android.support.percent.PercentFrameLayout
+                    android:id="@+id/managerFrame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/managerUpload"
+                        android:background="@drawable/button_trans"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/btn_icon_upload_red"/>
+
+                        <TextView
+                            fontPath="fonts/NotoReg.otf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_smileman_upload"
+                            android:textColor="@color/text_fb"
+                            android:textSize="@dimen/text_50"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/line_8e"/>
+                </android.support.percent.PercentFrameLayout>
+                <!--<android.support.percent.PercentFrameLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:visibility="invisible">-->
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/myMessage"-->
+                <!--android:background="@drawable/button_trans"-->
+                <!--app:layout_aspectRatio="100%"-->
+                <!--app:layout_widthPercent="100%"/>-->
+
+                <!--<LinearLayout-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical"-->
+                <!--app:layout_aspectRatio="100%"-->
+                <!--app:layout_widthPercent="100%">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:src="@drawable/btn_icon_message"/>-->
+
+                <!--<TextView-->
+                <!--fontPath="fonts/NotoReg.otf"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/setting_message"-->
+                <!--android:textColor="@color/text_ff"-->
+                <!--android:textSize="@dimen/text_50"/>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:background="@color/line_8e"/>-->
+
+                <!--</android.support.percent.PercentFrameLayout>-->
+
+
+            </LinearLayout>
+
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/managerFrame"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:orientation="vertical">-->
+
+
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="1dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/line_8e"/>-->
+
+                <!--<Space-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"/>-->
+
+                <!--<Space-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"/>-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="40dp"
+                android:weightSum="1">
+
+                <TextView
+                    fontPath="fonts/NotoReg.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_setting_1"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_50"/>
+
+                <TextView
+                    fontPath="fonts/NotoReg.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/text_setting_2"
+                    android:textColor="@color/text_ff"
+                    android:textSize="@dimen/text_50"/>
+
+                <ImageButton
+                    android:id="@+id/kakaoAsk"
+                    android:layout_width="257dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/kakao_btn"
+                    android:layout_weight="0.20"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

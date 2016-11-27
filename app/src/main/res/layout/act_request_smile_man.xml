@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/back_e5"
+              android:orientation="vertical"
+              tools:ignore="MissingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_h"
+        android:background="@drawable/top_bar">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/top_bar_button_h"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/button_trans"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/icon_top_before"/>
+
+        <TextView
+            android:id="@+id/title"
+            fontPath="fonts/NotoBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_request_smileman"
+            android:textColor="@color/text_ff"
+            android:textSize="@dimen/text_72"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text1"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/subtitle_request_smileman_seller"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/text_60"/>
+
+            <TextView
+                android:id="@+id/text2"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="@string/text_request_smileman_seller"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_50"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="266dp"
+                android:layout_height="255dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon_smileman_01"/>
+
+            <Button
+                android:id="@+id/requestSmileMan"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_h"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/button_yellow"
+                android:includeFontPadding="false"
+                android:text="@string/action_request_smileman"
+                android:textColor="@color/text_ff"
+                android:textSize="@dimen/text_50"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
