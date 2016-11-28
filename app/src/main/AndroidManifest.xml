@@ -238,6 +238,9 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="e167c777557a91868737173b99a7dfa547de404f" />
+
+        <meta-data android:name="com.autofactory.smilebuy.util.MyGlideModule" android:value="GlideModule" />
+
     </application>
 
 </manifest>
