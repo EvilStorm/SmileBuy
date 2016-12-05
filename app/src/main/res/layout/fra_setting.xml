@@ -400,8 +400,33 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:paddingTop="40dp"
-                android:weightSum="1">
+                >
 
+                <LinearLayout
+                    android:id="@+id/lay_buy_obd"
+                    android:layout_width="257dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#FF8484FF"
+                    android:layout_gravity="center_horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_smileman_02"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="15dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/buy_obj"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#FFFFFFFF"
+                        />
+                </LinearLayout>
                 <TextView
                     fontPath="fonts/NotoReg.otf"
                     android:layout_width="wrap_content"
@@ -411,22 +436,14 @@
                     android:textColor="@color/text_ff"
                     android:textSize="@dimen/text_50"/>
 
-                <TextView
-                    fontPath="fonts/NotoReg.otf"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/text_setting_2"
-                    android:textColor="@color/text_ff"
-                    android:textSize="@dimen/text_50"/>
 
                 <ImageButton
                     android:id="@+id/kakaoAsk"
                     android:layout_width="257dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:background="@drawable/kakao_btn"
-                    android:layout_weight="0.20"/>
+                    />
             </LinearLayout>
 
         </LinearLayout>

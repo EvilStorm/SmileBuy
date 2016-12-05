@@ -48,7 +48,7 @@
                 android:paddingRight="12dp">
 
                 <TextView
-                    android:id="@+id/userName"
+                    android:id="@+id/carName"
                     fontPath="fonts/NotoBold.otf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="24dp"
+            android:layout_height="32dp"
             android:background="@color/back_48"
             android:minHeight="24dp">
 
@@ -195,24 +195,26 @@
                 android:layout_marginLeft="78dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
                     fontPath="fonts/ArialBlack.ttf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
                     android:text="Q1"
+                    android:gravity="center_vertical"
                     android:textColor="@color/text_ff"
                     android:textSize="@dimen/text_60"/>
 
                 <TextView
                     android:id="@+id/question"
                     fontPath="fonts/NotoBold.otf"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
                     android:ellipsize="end"
+                    android:gravity="center_vertical"
                     android:singleLine="true"
                     android:textColor="@color/text_ff"
                     android:textSize="@dimen/text_48"/>
@@ -230,18 +232,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:layout_marginLeft="87dp"
             android:layout_marginRight="20dp"
             android:minHeight="47dp"
             android:orientation="horizontal"
-            android:paddingTop="6dp">
+            android:gravity="center_vertical"
+            >
 
+            <TextView
+                android:id="@+id/userName"
+                fontPath="fonts/NotoBold.otf"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:maxLines="2"
+                android:gravity="top"
+                android:textColor="@color/black_40"
+                android:textSize="@dimen/text_50"
+                android:text="JoonhYung So"
+                android:visibility="invisible"
+                />
             <TextView
                 fontPath="fonts/ArialBlack.ttf"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
-                android:gravity="top"
                 android:text="A"
                 android:textColor="@color/text_66"
                 android:textSize="@dimen/text_60"/>
@@ -251,7 +266,6 @@
                 fontPath="fonts/NotoReg.otf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:textColor="@color/text_66"

@@ -68,6 +68,17 @@ public class SettingFragment extends Fragment {
             }
         });
 
+        findViewById(R.id.lay_buy_obd).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://goo.gl/forms/puVg4qVzD9ZJQNhv2";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+
 //        findViewById(R.id.myMessage).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

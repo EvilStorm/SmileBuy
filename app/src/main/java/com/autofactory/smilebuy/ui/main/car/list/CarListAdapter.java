@@ -116,6 +116,7 @@ public class CarListAdapter extends BaseAdapter {
             });
         }
 
+        ((TextView) Utility.getViewHolder(convertView, R.id.carName)).setText(item.getName());
         ((TextView) Utility.getViewHolder(convertView, R.id.date)).setText(item.getDateAsShort());
 
         ImageView imageView = Utility.getViewHolder(convertView, R.id.mainImage);
