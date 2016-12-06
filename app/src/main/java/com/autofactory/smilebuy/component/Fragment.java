@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v4.app.*;
 import android.view.View;
 
+import com.autofactory.smilebuy.application.Application;
+
 /**
  * Created by AirPhebe on 2015. 10. 29..
  */
@@ -29,6 +31,8 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
         if(mFragmentActivity != null) {
             mFragmentActivity.setCurrent(this);
         }
+
+        Application.get().setGAScreen(getClass().getSimpleName());
     }
 
     @Override

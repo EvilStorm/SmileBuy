@@ -322,13 +322,12 @@
     <string name="action_done">완 료</string>
     <string name="text_current_version">현재버전</string>
     <string name="text_latest_version">최신버전</string>
-    <string name="text_setting_1">+ 중고차거래 관련하여 궁금한 것이 있거나,\n
-도움이 필요하면 언제든지 편하게 질문해주세요~\n</string>
+    <string name="text_setting_1">+ 중고차거래 관련하여 궁금한 것이 있거나,\n도움이 필요하면 언제든지 편하게 질문해주세요~</string>
     <string name="text_setting_2">+ 카카오톡 옐로아이디 친구추가 클릭!\n
 <a href="http://plus.kakao.com/home/@스마일바이">http://plus.kakao.com/home/@스마일바이</a>\n
     </string>
     <string name="buy_obj">OBD 구매하기</string>
-
+    <string name="download_caroo">카루라이브 설치하기</string>
 
     <string name="title_my_car">내차 관리</string>
     <string name="subtitle_my_sell_car">등록차량</string>

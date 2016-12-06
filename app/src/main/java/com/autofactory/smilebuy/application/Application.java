@@ -110,6 +110,14 @@ public class Application extends android.app.Application {
         Log.d("GAScreen : " + screenName);
     }
 
+    public void setGAEvent(String category, String action, String label){
+        getGATracker().send(new HitBuilders.EventBuilder()
+                .setCategory(category)
+                .setAction(action)
+                .setLabel(label)
+                .build());
+    }
+
     public Activity getActivity() {
         return mActivity;
     }

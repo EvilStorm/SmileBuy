@@ -78,6 +78,16 @@ public class SettingFragment extends Fragment {
             }
         });
 
+        findViewById(R.id.lay_download_caroo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + "com.pokevian.optimus")));
+
+            }
+        });
+
+
+
 
 //        findViewById(R.id.myMessage).setOnClickListener(new View.OnClickListener() {
 //            @Override

@@ -241,6 +241,10 @@ public class CarDetailFragment extends Fragment {
                     Intent i = new Intent(Intent.ACTION_CALL);
                     i.setData(Uri.parse(String.format("tel:%s", mCarData.getUser().getMobileNum())));
                     getActivity().startActivity(i);
+
+                    Application.get().setGAEvent(Constant.GoogleAnalytic.EVENT_CATEGORY_CONTACT,
+                            Constant.GoogleAnalytic.EVENT_ACTION_CALL,
+                            getUserName() + " -> " + mCarData.getUser().getMobileNum());
                 } else {
                     Utility.showPopupOk(getActivity(), getString(R.string.popup_message_phone_call_permission_required));
                 }
@@ -252,6 +256,9 @@ public class CarDetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + mCarData.getUser().getMobileNum())));
+                Application.get().setGAEvent(Constant.GoogleAnalytic.EVENT_CATEGORY_CONTACT,
+                        Constant.GoogleAnalytic.EVENT_ACTION_SMS,
+                        getUserName() + " -> " + mCarData.getUser().getMobileNum());
             }
         });
 
@@ -271,6 +278,13 @@ public class CarDetailFragment extends Fragment {
         return mView;
     }
 
+    private String getUserName(){
+        if(Application.get().getUserData() == null){
+            return "unknown";
+        }else{
+            return Application.get().getUserData().getNickName();
+        }
+    }
     @Override
     public void onResume() {
         super.onResume();

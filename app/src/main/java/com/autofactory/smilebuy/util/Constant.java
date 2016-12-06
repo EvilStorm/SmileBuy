@@ -128,4 +128,14 @@ public class Constant {
         NOT_YET,
         AVAILABLE,
     }
+
+    public class GoogleAnalytic{
+        public static final String EVENT_CATEGORY_CONTACT = "contact";
+
+        public static final String EVENT_ACTION_CALL = "call";
+        public static final String EVENT_ACTION_SMS = "sms";
+
+        public static final String EVENT_LABEL_NONE = "none";
+    }
+
 }
