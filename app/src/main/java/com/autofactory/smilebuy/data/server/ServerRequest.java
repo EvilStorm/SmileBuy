@@ -1,6 +1,8 @@
 package com.autofactory.smilebuy.data.server;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 
 
@@ -24,6 +26,9 @@ import com.navercorp.volleyextensions.volleyer.Volleyer;
 import com.navercorp.volleyextensions.volleyer.builder.PostBuilder;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -545,6 +550,43 @@ public class ServerRequest {
                 .execute();
     }
 
+    private Bitmap getBitmap(String filePath){
+        Bitmap bitmap = null;
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 2;
+
+        bitmap = BitmapFactory.decodeFile(filePath, options);
+
+        return bitmap;
+    }
+
+    private File makeThumnail(String filePath){
+
+        Bitmap bitmap = getBitmap(filePath);
+        String[] fileName = filePath.split("/");
+
+        File storage = Application.get().getCacheDir();
+        String tempFileName = fileName[(fileName.length-1)];
+        File tempFile = new File(storage, tempFileName);
+
+        try{
+            tempFile.createNewFile();
+            FileOutputStream out = new FileOutputStream(tempFile);
+            if(filePath.toLowerCase().contains("png")){
+                bitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
+            }else{
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out);
+            }
+            out.close();
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e2){
+            e2.printStackTrace();
+        }
+
+        return tempFile;
+    }
+
     public void requestRegisterCar(CarDataEdit carDataEdit, final Response.Listener<RegisterCarResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
 
@@ -594,7 +636,9 @@ public class ServerRequest {
                         Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE))
                                 .addStringPart("login_token", Application.get().getLoginToken())
                                 .addStringPart("car_id", "" + response.getCarID())
-                                .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+//                                .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+                                .addFilePart("image", makeThumnail(Uri.parse(pictureData.getURL()).getPath()))
+
                                 .withTargetClass(UploadPictureResult.class)
                                 .withListener(this)
                                 .execute();
@@ -655,7 +699,8 @@ public class ServerRequest {
                                 Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE))
                                         .addStringPart("login_token", Application.get().getLoginToken())
                                         .addStringPart("car_id", "" + response.getCarData().getID())
-                                        .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+//                                        .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+                                        .addFilePart("image", makeThumnail(Uri.parse(pictureData.getURL()).getPath()))
                                         .withTargetClass(UploadPictureResult.class)
                                         .withListener(uploadPictureResultListener)
                                         .execute();
