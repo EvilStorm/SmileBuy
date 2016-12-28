@@ -866,7 +866,8 @@ public class ServerRequest {
                         Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE_SMILEBUY))
                                 .addStringPart("login_token", Application.get().getLoginToken())
                                 .addStringPart("car_smile_buy_id", "" + response.getCarID())
-                                .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+//                                .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+                                .addFilePart("image", makeThumnail(Uri.parse(pictureData.getURL()).getPath()))
                                 .withTargetClass(UploadPictureSmileBuyResult.class)
                                 .withListener(this)
                                 .execute();
@@ -917,7 +918,8 @@ public class ServerRequest {
                                 Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE_SMILEBUY))
                                         .addStringPart("login_token", Application.get().getLoginToken())
                                         .addStringPart("car_smile_buy_id", "" + response.getCarData().getID())
-                                        .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+//                                        .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
+                                        .addFilePart("image", makeThumnail(Uri.parse(pictureData.getURL()).getPath()))
                                         .withTargetClass(UploadPictureSmileBuyResult.class)
                                         .withListener(uploadPictureResultListener)
                                         .execute();

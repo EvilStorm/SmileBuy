@@ -67,6 +67,8 @@ public class Application extends android.app.Application {
 //        com.android.volley.VolleyLog.DEBUG = true;
 //    }
 
+    private final boolean IS_PLAY_STORE_UPDATE = true;
+
     private static Application _singleton = null;
 
     public static Application get() {
@@ -221,6 +223,10 @@ public class Application extends android.app.Application {
 
     public void DoUpdate() {
         mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(mVersionUpdateURL)));
+        //TODO OneStore 등록 후 업데이트 테스트 해야 함
+        if(IS_PLAY_STORE_UPDATE){
+        }else{
+        }
     }
 
     public void onLoginSuccess(String loginToken, UserData userData, int latestVersion, String versionUpdateURL) {
