@@ -143,7 +143,7 @@
     <string name="prompt_sell_info_fuel">연료선택</string>
     <string name="prompt_sell_info_transmission">변속기 선택</string>
     <string name="prompt_sell_info_engine">배기량</string>
-    <string name="prompt_sell_info_additional">사고유무 등 기타 정보를 입력 해주세요.</string>
+    <string name="prompt_sell_info_additional">차랑 특징 및 강조하고 싶은 내용을 적어주세요.</string>
 
     <string name="text_sell_info_name">제목</string>
     <string name="text_sell_info_car_num">차번호</string>
@@ -358,7 +358,7 @@
     <string name="popup_message_smileman_not_available_choose_area">지역을 먼저 선택해 주세요.</string>
     <string name="popup_message_no_target_car_id">감정차량 아이디를 입력해주세요.</string>
     <string name="popup_message_no_target_car">조회된 차량이 없습니다.\n아이디를 확인해주세요.</string>
-    <string name="popup_message_at_least_one_interview">적어도 한 개 이상의 인터뷰를 작성하셔야 합니다.</string>
+    <string name="popup_message_at_least_one_interview">적어도 하나 이상의 인터뷰를 작성하셔야 합니다.</string>
     <string name="popup_message_check_smileman_request_1">해당 차량에 대해 \"차량감정\"을 신청하시겠습니까?</string>
     <string name="popup_message_check_smileman_request_2">해당 차량에 대해 \"스마일팩\"을 신청하시겠습니까?</string>
     <string name="popup_message_check_smileman_request">해당 차량에 대해 \"스마일맨 서비스\"를 신청하시겠습니까?</string>
@@ -427,27 +427,40 @@
         <item>수동</item>
     </string-array>
 
+    <!--<string-array name="interview_qustion">-->
+        <!--<item>내 차와 가장 행복했던 순간은 언제였나요?</item>-->
+        <!--<item>내 차에 대한 애칭이 있나요? 이유는?</item>-->
+        <!--<item>내 차를 구매 후 잘 샀다고 생각했던 때는 언제였나요?</item>-->
+        <!--<item>내 차를 데려갈 분에게 남기고 싶은 말은?</item>-->
+        <!--<item>차를 보내면서 마지막으로 내 차에게 남기고 싶은 말은?</item>-->
+        <!--<item>내 차와 함께 한 가장 기억나는 에피소드는?</item>-->
+        <!--<item>드라이브 갔었던 생각나는 장소는?</item>-->
+        <!--<item>내 차만의 장점이 있다면 알려주세요.</item>-->
+        <!--<item>추천하고 싶은 드라이브 장소는?</item>-->
+        <!--<item>내 차에 태웠던 친구 중 특별히 기억나는 사람이 있나요?</item>-->
+        <!--<item>가장 멀리까지 가봤던 곳이 있다면 어디인가요?</item>-->
+        <!--<item>차에 돌봄이 필요한 곳을 알려주세요. 특별히 신경써야 할 곳이 있나요?</item>-->
+        <!--<item>내 차가 자주 들렸던 정비업체가 있으면 공유해주세요.</item>-->
+        <!--<item>자주 들렸던 주유소 브랜드가 있었나요?</item>-->
+        <!--<item>내 차 유지 관리에 대한 팁이 있으면 알려주세요.</item>-->
+        <!--<item>내 차를 받는 분에게 추가로 나누고 싶은 물품이 있나요?</item>-->
+        <!--<item>새로 구매 예정인 차가 있다면 이유와 함께 알려주세요.</item>-->
+        <!--<item>앞으로 구매 예정인 차가 중고차라면 차량 모델과 희망사양을 알려주세요.</item>-->
+        <!--<item>내 차에 대해 이것만은 아쉽다 하는 부분이 있나요?</item>-->
+        <!--<item>내 차에서 지금 손을 봤으면 하는 곳이 있나요?</item>-->
+    <!--</string-array>-->
+
+    <string-array name="interview_fixed_qustion">
+        <item>사고 및 수리 내역 (혹은 수리가 필요한 부분)</item>
+        <item>주요 옵션 (썬루프,네비게이션,블랙박스,스마트키,후방카메라 등)</item>
+        <item>차량 상태 정보 (외관, 내장, 소모품, 흡연 여부 등)</item>
+    </string-array>
+
     <string-array name="interview_qustion">
-        <item>내 차와 가장 행복했던 순간은 언제였나요?</item>
-        <item>내 차에 대한 애칭이 있나요? 이유는?</item>
         <item>내 차를 구매 후 잘 샀다고 생각했던 때는 언제였나요?</item>
-        <item>내 차를 데려갈 분에게 남기고 싶은 말은?</item>
-        <item>차를 보내면서 마지막으로 내 차에게 남기고 싶은 말은?</item>
-        <item>내 차와 함께 한 가장 기억나는 에피소드는?</item>
-        <item>드라이브 갔었던 생각나는 장소는?</item>
         <item>내 차만의 장점이 있다면 알려주세요.</item>
-        <item>추천하고 싶은 드라이브 장소는?</item>
-        <item>내 차에 태웠던 친구 중 특별히 기억나는 사람이 있나요?</item>
-        <item>가장 멀리까지 가봤던 곳이 있다면 어디인가요?</item>
-        <item>차에 돌봄이 필요한 곳을 알려주세요. 특별히 신경써야 할 곳이 있나요?</item>
-        <item>내 차가 자주 들렸던 정비업체가 있으면 공유해주세요.</item>
-        <item>자주 들렸던 주유소 브랜드가 있었나요?</item>
-        <item>내 차 유지 관리에 대한 팁이 있으면 알려주세요.</item>
-        <item>내 차를 받는 분에게 추가로 나누고 싶은 물품이 있나요?</item>
-        <item>새로 구매 예정인 차가 있다면 이유와 함께 알려주세요.</item>
-        <item>앞으로 구매 예정인 차가 중고차라면 차량 모델과 희망사양을 알려주세요.</item>
         <item>내 차에 대해 이것만은 아쉽다 하는 부분이 있나요?</item>
-        <item>내 차에서 지금 손을 봤으면 하는 곳이 있나요?</item>
+        <item>차량의 주요 운행 용도를 알려주세요.</item>
     </string-array>
 
 

@@ -19,6 +19,7 @@ import com.autofactory.smilebuy.component.Fragment;
 import com.autofactory.smilebuy.component.FragmentActivity;
 import com.autofactory.smilebuy.data.model.InterviewData;
 import com.autofactory.smilebuy.util.Constant;
+import com.autofactory.smilebuy.util.Log;
 import com.autofactory.smilebuy.util.Utility;
 import com.autofactory.smilebuy.util.popup.PopupBase;
 
@@ -31,12 +32,12 @@ public class RegisterCarInterviewFragment extends Fragment {
 
     private LinearLayout mContainer;
     private List<View> mAddedInterviews = new ArrayList<>();
-
+    private ArrayList<String> questionList = new ArrayList<>();
+    private String [] interviewFixedQuestions;
 
     public RegisterCarInterviewFragment() {
         // Required empty public constructor
     }
-
 
     public static RegisterCarInterviewFragment newInstance(RegisterCarActivity fragmentActivity, int id, String name) {
         RegisterCarInterviewFragment fragment = new RegisterCarInterviewFragment();
@@ -44,8 +45,6 @@ public class RegisterCarInterviewFragment extends Fragment {
         fragment.mRegisterCarActivity = fragmentActivity;
         return fragment;
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,11 +60,17 @@ public class RegisterCarInterviewFragment extends Fragment {
         mContainer = (LinearLayout) findViewById(R.id.interviewContainer);
         mAddedInterviews.clear();
 
+        interviewFixedQuestions = getResources().getStringArray(R.array.interview_fixed_qustion);
+        String [] interviewQuestions = getResources().getStringArray(R.array.interview_qustion);
+        for(String qustion : interviewQuestions){
+            questionList.add(qustion);
+        }
 
         findViewById(R.id.addInterview).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(mFragmentActivity, AddInterviewActivity.class);
+                i.putStringArrayListExtra("questionList", questionList);
                 startActivityForResult(i, AddInterviewActivity.REQUEST_CODE_QUESTION);
                 mFragmentActivity.overridePendingTransition(R.anim.anim_in_from_bottom, R.anim.anim_stay);
             }
@@ -82,7 +87,30 @@ public class RegisterCarInterviewFragment extends Fragment {
 
     }
 
+    private void removeQuestion(String question) {
+        for (int i=0; i<questionList.size(); i++) {
+            if(questionList.get(i).equals(question)){
+                questionList.remove(i);
+                break;
+            }
+        }
+    }
+
+    private boolean isNecessaryQuestion(String question) {
+
+        for (int i=0; i<interviewFixedQuestions.length; i++) {
+            Log.e(" interviewFixedQuestions[i] : " + interviewFixedQuestions[i] +"  ///  qustion : " + question +     "   equal = " + interviewFixedQuestions[i].equals(question));
+            if(interviewFixedQuestions[i].equals(question)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void addInterview(String question, String answer) {
+
+        removeQuestion(question);
+
         final View interview = getActivity().getLayoutInflater().inflate(R.layout.item_interview_sell_interview, null);
         ((TextView) interview.findViewById(R.id.question)).setText(question);
         EditText answerView = (EditText) interview.findViewById(R.id.answer);
@@ -90,19 +118,26 @@ public class RegisterCarInterviewFragment extends Fragment {
             answerView.setText(answer);
         }
         answerView.requestFocus();
-        interview.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utility.showPopupOk(mFragmentActivity, getString(R.string.alert_delete_interview), new PopupBase.OnClickListener() {
-                    @Override
-                    public void onClick() {
-                        mContainer.removeView(interview);
-                        mAddedInterviews.remove(interview);
-                        refreshInterviews();
-                    }
-                });
-            }
-        });
+        if(isNecessaryQuestion(question)) {
+            interview.findViewById(R.id.delete).setVisibility(View.INVISIBLE);
+            interview.findViewById(R.id.img_delete).setVisibility(View.INVISIBLE);
+        } else {
+            interview.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Utility.showPopupOk(mFragmentActivity, getString(R.string.alert_delete_interview), new PopupBase.OnClickListener() {
+                        @Override
+                        public void onClick() {
+                            mContainer.removeView(interview);
+                            mAddedInterviews.remove(interview);
+                            TextView tv_question = (TextView)interview.findViewById(R.id.question);
+                            questionList.add(tv_question.getText().toString().trim());
+                            refreshInterviews();
+                        }
+                    });
+                }
+            });
+        }
 
         mContainer.addView(interview, mContainer.getChildCount() - 1);
         mAddedInterviews.add(interview);
@@ -116,6 +151,7 @@ public class RegisterCarInterviewFragment extends Fragment {
     }
 
 
+
     private void fillAtFirst() {
         List<InterviewData> interviews = mRegisterCarActivity.getCarDataEdit().getInterviews();
         if(interviews.size() > 0) {
@@ -127,11 +163,22 @@ public class RegisterCarInterviewFragment extends Fragment {
             if(Application.get().isManager()) {
                 addInterview(getString(R.string.interview_for_manager), null);
             } else {
-                String [] interviewQuestions = getResources().getStringArray(R.array.interview_qustion);
-                int randIndex = (int) (Math.random() * interviewQuestions.length);
-                addInterview(interviewQuestions[randIndex], null);
+                //2016.12.28 고정 질문 3개 랜덤질문 4개중 하나로 변경.
+                for (int i=0; i<interviewFixedQuestions.length; i++) {
+                    addInterview(interviewFixedQuestions[i], null);
+                }
+
+                int randIndex = (int) (Math.random() * questionList.size());
+                addInterview(questionList.get(randIndex), null);
             }
         }
+        setFoucusFirstQuestion();
+    }
+
+    private void setFoucusFirstQuestion() {
+        View view = mAddedInterviews.get(0);
+        EditText et_answer = (EditText)view.findViewById(R.id.answer);
+        et_answer.requestFocus();
     }
 
     private boolean saveToCarData() {

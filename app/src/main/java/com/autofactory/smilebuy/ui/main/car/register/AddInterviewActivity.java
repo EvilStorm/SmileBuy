@@ -12,6 +12,8 @@ import com.autofactory.smilebuy.component.NormalActivity;
 import com.autofactory.smilebuy.util.Utility;
 import com.autofactory.smilebuy.util.popup.PopupBase;
 
+import java.util.ArrayList;
+
 public class AddInterviewActivity extends NormalActivity {
     public static final int REQUEST_CODE_QUESTION = 0;
     public static final String RESULT_KEY_QUESTION = "RESULT_KEY_QUESTION";
@@ -44,7 +46,8 @@ public class AddInterviewActivity extends NormalActivity {
             }
         });
 
-        mListAdapter = new AddInterviewListAdapter(this, getResources().getStringArray(R.array.interview_qustion));
+        ArrayList<String> list = getIntent().getStringArrayListExtra("questionList");
+        mListAdapter = new AddInterviewListAdapter(this, list.toArray(new String[list.size()]));
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(mListAdapter);

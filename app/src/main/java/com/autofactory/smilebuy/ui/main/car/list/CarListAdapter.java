@@ -220,16 +220,20 @@ public class CarListAdapter extends BaseAdapter {
             }
         });
 
-
         TextView question = Utility.getViewHolder(convertView, R.id.question);
         TextView answer = Utility.getViewHolder(convertView, R.id.answer);
         if (item.getInterviews().size() > 0) {
             question.setVisibility(View.VISIBLE);
             answer.setVisibility(View.VISIBLE);
 
-            InterviewData interviewData = item.getInterviews().get(0);
+            int randIndex = (int) (Math.random() * item.getInterviews().size());
+            InterviewData interviewData = item.getInterviews().get(randIndex);
             question.setText(interviewData.getQuestion());
             answer.setText(interviewData.getAnswer());
+
+            TextView tv_question_num = Utility.getViewHolder(convertView, R.id.tv_question_num);
+            tv_question_num.setText("Q" + (randIndex+1));
+
         } else {
             question.setVisibility(View.GONE);
             answer.setVisibility(View.GONE);
