@@ -134,6 +134,7 @@ public class SettingFragment extends Fragment {
 
         View managerFrame = findViewById(R.id.managerFrame);
         if(Application.get().isManager()) {
+            findViewById(R.id.hide_line).setVisibility(View.VISIBLE);
             managerFrame.setVisibility(View.VISIBLE);
             findViewById(R.id.managerUpload).setOnClickListener(new View.OnClickListener() {
                 @Override
