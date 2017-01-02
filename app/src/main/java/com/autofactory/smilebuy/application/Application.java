@@ -1,6 +1,5 @@
 package com.autofactory.smilebuy.application;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +9,6 @@ import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -18,45 +16,36 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageLoader;
 import com.autofactory.smilebuy.R;
 import com.autofactory.smilebuy.data.model.CarData;
-import com.autofactory.smilebuy.data.model.CarDataSimple;
+import com.autofactory.smilebuy.data.model.UserData;
 import com.autofactory.smilebuy.data.model.UserDataSimple;
 import com.autofactory.smilebuy.data.server.ServerRequest;
-import com.autofactory.smilebuy.data.model.UserData;
 import com.autofactory.smilebuy.ui.login.LoginActivity;
 import com.autofactory.smilebuy.ui.main.car.list.CarListAdapter;
 import com.autofactory.smilebuy.util.Constant;
 import com.autofactory.smilebuy.util.Log;
 import com.autofactory.smilebuy.util.Utility;
-import com.autofactory.smilebuy.util.popup.PopupBase;
 import com.crashlytics.android.Crashlytics;
 import com.facebook.AccessToken;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
-import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.TedPermission;
 import com.navercorp.volleyextensions.volleyer.Volleyer;
 import com.navercorp.volleyextensions.volleyer.VolleyerConfiguration;
 import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactory;
 import com.navercorp.volleyextensions.volleyer.factory.DefaultVolleyerConfigurationFactory;
 import com.navercorp.volleyextensions.volleyer.http.HttpContent;
 import com.navercorp.volleyextensions.volleyer.multipart.Multipart;
-import com.navercorp.volleyextensions.volleyer.request.VolleyerRequest;
 import com.navercorp.volleyextensions.volleyer.request.creator.RequestCreator;
 import com.navercorp.volleyextensions.volleyer.response.parser.NetworkResponseParser;
 
-import io.fabric.sdk.android.Fabric;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.UUID;
 
+import io.fabric.sdk.android.Fabric;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
@@ -67,6 +56,7 @@ public class Application extends android.app.Application {
 //        com.android.volley.VolleyLog.DEBUG = true;
 //    }
 
+    private final String ONE_STORE_PID = "0000709265";
     private final boolean IS_PLAY_STORE_UPDATE = true;
 
     private static Application _singleton = null;
@@ -222,10 +212,10 @@ public class Application extends android.app.Application {
     }
 
     public void DoUpdate() {
-        mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(mVersionUpdateURL)));
-        //TODO OneStore 등록 후 업데이트 테스트 해야 함
         if(IS_PLAY_STORE_UPDATE){
+            mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(mVersionUpdateURL)));
         }else{
+            mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("onestore://common/product/" + ONE_STORE_PID)));
         }
     }
 
