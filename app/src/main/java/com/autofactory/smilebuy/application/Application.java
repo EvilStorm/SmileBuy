@@ -26,6 +26,7 @@ import com.autofactory.smilebuy.ui.main.car.list.CarListAdapter;
 import com.autofactory.smilebuy.util.Constant;
 import com.autofactory.smilebuy.util.Log;
 import com.autofactory.smilebuy.util.Utility;
+import com.autofactory.smilebuy.util.popup.PopupBase;
 import com.crashlytics.android.Crashlytics;
 import com.facebook.AccessToken;
 import com.google.android.gms.analytics.GoogleAnalytics;
@@ -55,9 +56,6 @@ public class Application extends android.app.Application {
 //    static {
 //        com.android.volley.VolleyLog.DEBUG = true;
 //    }
-
-    private final String ONE_STORE_PID = "0000709265";
-    private final boolean IS_PLAY_STORE_UPDATE = true;
 
     private static Application _singleton = null;
 
@@ -212,10 +210,15 @@ public class Application extends android.app.Application {
     }
 
     public void DoUpdate() {
-        if(IS_PLAY_STORE_UPDATE){
+        try{
             mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(mVersionUpdateURL)));
-        }else{
-            mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("onestore://common/product/" + ONE_STORE_PID)));
+        } catch (Exception e) {
+            Utility.showPopupOk(Application.get().getActivity(), "삭제 후 마켓에서 다시 다운로드 받아주세요.", new PopupBase.OnClickListener() {
+                @Override
+                public void onClick() {
+                    Application.get().getActivity().finish();
+                }
+            });
         }
     }
 
@@ -225,7 +228,7 @@ public class Application extends android.app.Application {
         mLatestVersion = latestVersion;
         mVersionUpdateURL = versionUpdateURL;
 
-        Log.d("LoginToken : " + mLoginToken);
+        Log.d("LoginToken : " + mLoginToken + " latestVersion : " + latestVersion);
     }
 
     public void onUserDataUpdated(UserData userData) {
@@ -380,9 +383,9 @@ public class Application extends android.app.Application {
 
     private void initCalligraphy() {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                        .setDefaultFontPath("fonts/NotoReg.otf")
-                        .setFontAttrId(R.attr.fontPath)
-                        .build()
+                .setDefaultFontPath("fonts/NotoReg.otf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
         );
     }
 
