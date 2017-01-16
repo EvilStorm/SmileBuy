@@ -1,21 +1,14 @@
 package com.autofactory.smilebuy.ui.main;
 
-import android.content.Intent;
-import android.support.design.widget.TabLayout;
-
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.View;
-
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.autofactory.smilebuy.R;
 import com.autofactory.smilebuy.application.Application;
 import com.autofactory.smilebuy.component.FragmentActivity;
 import com.autofactory.smilebuy.ui.main.car.list.CarListAdapter;
-import com.autofactory.smilebuy.ui.main.user.UserProfileActivity;
 import com.autofactory.smilebuy.util.Constant;
 
 public class MainActivity extends FragmentActivity {
