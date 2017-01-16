@@ -95,6 +95,8 @@ public class SplashActivity extends NormalActivity {
                             }
                         }
                     }, true);
+                }else{
+                    moveToLoginActivity(false);
                 }
             }
         } else {
