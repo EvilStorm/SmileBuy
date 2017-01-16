@@ -92,7 +92,7 @@ public class CarListAdapter extends BaseAdapter {
         final CarData item = mList.get(position);
         final UserDataSimple user = item.getUser();
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.neo_item_car_list, null);
+            convertView = mInflater.inflate(R.layout.item_car_list, null);
         }
 
 
