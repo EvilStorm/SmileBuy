@@ -18,7 +18,6 @@ import com.autofactory.smilebuy.application.Application;
 import com.autofactory.smilebuy.component.FragmentActivity;
 import com.autofactory.smilebuy.component.GlideCircleTransform;
 import com.autofactory.smilebuy.data.model.CarData;
-import com.autofactory.smilebuy.data.model.InterviewData;
 import com.autofactory.smilebuy.data.model.UserDataSimple;
 import com.autofactory.smilebuy.data.server.CarFavoriteResult;
 import com.autofactory.smilebuy.data.server.CarListResult;
@@ -53,11 +52,18 @@ public class CarListAdapter extends BaseAdapter {
     private FilterInfo mFilterInfo = new FilterInfo();
     private EditText mSearch = null;
 
+    private StringBuffer car_info = new StringBuffer();
+    private String[] mAreaArray;
+    private String[] mFuelArray;
+
     public CarListAdapter(FragmentActivity activity) {
         mActivity = activity;
         mContext = activity;
         mInflater = LayoutInflater.from(mContext);
         mList.clear();
+
+        mAreaArray = activity.getResources().getStringArray(R.array.area);
+        mFuelArray = activity.getResources().getStringArray(R.array.fuel);
 
         refreshCarList(true);
     }
@@ -86,7 +92,7 @@ public class CarListAdapter extends BaseAdapter {
         final CarData item = mList.get(position);
         final UserDataSimple user = item.getUser();
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.item_car_list, null);
+            convertView = mInflater.inflate(R.layout.neo_item_car_list, null);
         }
 
 
@@ -118,6 +124,19 @@ public class CarListAdapter extends BaseAdapter {
 
         ((TextView) Utility.getViewHolder(convertView, R.id.carName)).setText(item.getName());
         ((TextView) Utility.getViewHolder(convertView, R.id.date)).setText(item.getDateAsShort());
+
+        TextView tv_car_info = Utility.getViewHolder(convertView, R.id.tv_car_info);
+        if(car_info.length() > 0 ) {
+            car_info.delete(0,  car_info.length());
+        }
+        car_info.append(item.getAgeYear());
+        car_info.append("/");
+        car_info.append(item.getAgeMonth());
+        car_info.append(" | " + item.getMileageAsString(mActivity.getResources()));
+        car_info.append(" | " + item.getFuelTypeAsString(mActivity.getResources()));
+        car_info.append(" | " + item.getAreaTypeAsString(mActivity.getResources()));
+
+        tv_car_info.setText(car_info.toString());
 
         ImageView imageView = Utility.getViewHolder(convertView, R.id.mainImage);
         Glide.with(mActivity)
@@ -220,24 +239,24 @@ public class CarListAdapter extends BaseAdapter {
             }
         });
 
-        TextView question = Utility.getViewHolder(convertView, R.id.question);
-        TextView answer = Utility.getViewHolder(convertView, R.id.answer);
-        if (item.getInterviews().size() > 0) {
-            question.setVisibility(View.VISIBLE);
-            answer.setVisibility(View.VISIBLE);
-
-            int randIndex = (int) (Math.random() * item.getInterviews().size());
-            InterviewData interviewData = item.getInterviews().get(randIndex);
-            question.setText(interviewData.getQuestion());
-            answer.setText(interviewData.getAnswer());
-
-            TextView tv_question_num = Utility.getViewHolder(convertView, R.id.tv_question_num);
-            tv_question_num.setText("Q" + (randIndex+1));
-
-        } else {
-            question.setVisibility(View.GONE);
-            answer.setVisibility(View.GONE);
-        }
+//        TextView question = Utility.getViewHolder(convertView, R.id.question);
+//        TextView answer = Utilit®y.getViewHolder(convertView, R.id.answer);
+//        if (item.getInterviews().size() > 0) {
+//            question.setVisibility(View.VISIBLE);
+//            answer.setVisibility(View.VISIBLE);
+//
+//            int randIndex = (int) (Math.random() * item.getInterviews().size());
+//            InterviewData interviewData = item.getInterviews().get(randIndex);
+//            question.setText(interviewData.getQuestion());
+//            answer.setText(interviewData.getAnswer());
+//
+//            TextView tv_question_num = Utility.getViewHolder(convertView, R.id.tv_question_num);
+//            tv_question_num.setText("Q" + (randIndex+1));
+//
+//        } else {
+//            question.setVisibility(View.GONE);
+//            answer.setVisibility(View.GONE);
+//        }
 
         imageView = Utility.getViewHolder(convertView, R.id.saleTag);
         if (item.isSold()) {
