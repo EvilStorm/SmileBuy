@@ -58,7 +58,7 @@ public class ServerRequest {
 
     public void requestRegister(AccessToken facebookToken, String nickName, int userType, String countryCode, String phoneNum, final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_REGISTER))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_REGISTER))
                 .addStringPart("device_uuid", Application.get().getUUID())
                 .addStringPart("facebook_token", facebookToken.getUserId())
                 .addStringPart("nickname", nickName)
@@ -84,7 +84,7 @@ public class ServerRequest {
 
     public void requestRegister(String email, String password, String nickName, int userType, String countryCode, String phoneNum, final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_REGISTER))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_REGISTER))
                 .addStringPart("device_uuid", Application.get().getUUID())
                 .addStringPart("email", email)
                 .addStringPart("password", password)
@@ -111,7 +111,7 @@ public class ServerRequest {
 
     public void requestVerifyPhone(String countryCode, String phoneNum, final Response.Listener<ServerResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_VERIFY_PHONE))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_VERIFY_PHONE))
                 .addStringPart("country_code", countryCode)
                 .addStringPart("mobile_num", phoneNum)
                 .withTargetClass(ServerResult.class)
@@ -133,7 +133,7 @@ public class ServerRequest {
 
     public void requestCheckSecret(String countryCode, String phoneNum, int secretNum, final Response.Listener<ServerResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CHECK_SECRET))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CHECK_SECRET))
                 .addStringPart("country_code", countryCode)
                 .addStringPart("mobile_num", phoneNum)
                 .addStringPart("secret", "" + secretNum)
@@ -156,7 +156,7 @@ public class ServerRequest {
 
     public void requestWithdraw(final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_WITHDRAW))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_WITHDRAW))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .withTargetClass(ServerResult.class)
                 .withListener(new Response.Listener<ServerResult>() {
@@ -177,7 +177,7 @@ public class ServerRequest {
 
     public void requestChangePwdLogin(String password, final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CHANGE_PWD_LOGIN))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CHANGE_PWD_LOGIN))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("password", password)
                 .withTargetClass(ServerResult.class)
@@ -199,7 +199,7 @@ public class ServerRequest {
 
     public void requestChangePwdSave(String newPassword, final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CHANGE_PWD_SAVE))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CHANGE_PWD_SAVE))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("new_password", newPassword)
                 .withTargetClass(ServerResult.class)
@@ -224,8 +224,8 @@ public class ServerRequest {
         if(!autoLogin) {
             Utility.showProgressDialog(Application.get().getActivity());
         }
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_LOGIN))
-                .addStringPart("client_os", Constant.CLIENT_OS_TYPE)
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_LOGIN))
+                .addStringPart("client_os", Constant.getMarketType())
                 .addStringPart("client_version", "" + Application.get().getVersion())
                 .addStringPart("facebook_token", facebookToken.getUserId())
                 .withTargetClass(LoginResult.class)
@@ -283,8 +283,8 @@ public class ServerRequest {
         if(!autoLogin) {
             Utility.showProgressDialog(Application.get().getActivity());
         }
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_LOGIN))
-                .addStringPart("client_os", Constant.CLIENT_OS_TYPE)
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_LOGIN))
+                .addStringPart("client_os", Constant.getMarketType())
                 .addStringPart("client_version", "" + Application.get().getVersion())
                 .addStringPart("email", email)
                 .addStringPart("password", password)
@@ -337,7 +337,7 @@ public class ServerRequest {
 
     public void requestFindPW(String email, String name, final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_FIND_PW))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_FIND_PW))
                 .addStringPart("email", email)
                 .addStringPart("nickname", name)
                 .withTargetClass(ServerResult.class)
@@ -363,7 +363,7 @@ public class ServerRequest {
             requestResetNickname(onSuccess);
         } else {
             Utility.showProgressDialog(Application.get().getActivity());
-            Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPDATE_USER_NAME))
+            Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPDATE_USER_NAME))
                     .addStringPart("login_token", Application.get().getLoginToken())
                     .addStringPart("nickname", nickname)
                     .withTargetClass(UserDataUpdatedResult.class)
@@ -390,7 +390,7 @@ public class ServerRequest {
             requestResetSaying(onSuccess);
         } else {
             Utility.showProgressDialog(Application.get().getActivity());
-            Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPDATE_USER_SAYING))
+            Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPDATE_USER_SAYING))
                     .addStringPart("login_token", Application.get().getLoginToken())
                     .addStringPart("profile_say", saying)
                     .withTargetClass(UserDataUpdatedResult.class)
@@ -417,7 +417,7 @@ public class ServerRequest {
             requestResetProfilePic(onSuccess);
         } else {
             Utility.showProgressDialog(Application.get().getActivity());
-            Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPDATE_USER_PROFILE_PIC))
+            Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPDATE_USER_PROFILE_PIC))
                     .addStringPart("login_token", Application.get().getLoginToken())
                     .addFilePart("profile_picture", new File(Uri.parse(filePath).getPath()))
                     .withTargetClass(UserDataUpdatedResult.class)
@@ -441,7 +441,7 @@ public class ServerRequest {
 
     public void requestUpdateMobileNumPolicy(int policy, final Response.Listener<UserDataUpdatedResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPDATE_USER_MOBILE_NUM_POLICY))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPDATE_USER_MOBILE_NUM_POLICY))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("mobile_num_policy", "" + policy)
                 .withTargetClass(UserDataUpdatedResult.class)
@@ -464,7 +464,7 @@ public class ServerRequest {
 
     private void requestResetNickname(final Response.Listener<UserDataUpdatedResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_RESET_USER_NAME))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_RESET_USER_NAME))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .withTargetClass(UserDataUpdatedResult.class)
                 .withListener(new Response.Listener<UserDataUpdatedResult>() {
@@ -486,7 +486,7 @@ public class ServerRequest {
 
     private void requestResetProfilePic(final Response.Listener<UserDataUpdatedResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_RESET_USER_PROFILE_PIC))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_RESET_USER_PROFILE_PIC))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .withTargetClass(UserDataUpdatedResult.class)
                 .withListener(new Response.Listener<UserDataUpdatedResult>() {
@@ -508,7 +508,7 @@ public class ServerRequest {
 
     private void requestResetSaying(final Response.Listener<UserDataUpdatedResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_RESET_USER_SAYING))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_RESET_USER_SAYING))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .withTargetClass(UserDataUpdatedResult.class)
                 .withListener(new Response.Listener<UserDataUpdatedResult>() {
@@ -530,7 +530,7 @@ public class ServerRequest {
 
     public void requestGetUserData(long userID, final Response.Listener<GetUserDataResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_GET_USER_DATA))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_GET_USER_DATA))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("user_id", "" + userID)
                 .withTargetClass(GetUserDataResult.class)
@@ -601,7 +601,7 @@ public class ServerRequest {
                 if (response.isSuccess()) {
                     if (toRemoveIDs.size() > 0) {
                         long removeID = toRemoveIDs.remove(toRemoveIDs.size() - 1);
-                        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_DELETE_PICTURE))
+                        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_DELETE_PICTURE))
                                 .addStringPart("login_token", Application.get().getLoginToken())
                                 .addStringPart("image_id", "" + removeID)
                                 .withTargetClass(ServerResult.class)
@@ -633,7 +633,7 @@ public class ServerRequest {
                 if (response.isSuccess()) {
                     if (pictures.size() > 0) {
                         PictureData pictureData = pictures.remove(pictures.size() - 1);
-                        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE))
+                        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPLOAD_PICTURE))
                                 .addStringPart("login_token", Application.get().getLoginToken())
                                 .addStringPart("car_id", "" + response.getCarID())
 //                                .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
@@ -645,7 +645,7 @@ public class ServerRequest {
                     } else {
                         if (toRemoveIDs.size() > 0) {
                             long removeID = toRemoveIDs.remove(toRemoveIDs.size() - 1);
-                            Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_DELETE_PICTURE))
+                            Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_DELETE_PICTURE))
                                     .addStringPart("login_token", Application.get().getLoginToken())
                                     .addStringPart("image_id", "" + removeID)
                                     .withTargetClass(ServerResult.class)
@@ -667,7 +667,7 @@ public class ServerRequest {
         };
 
         // 1. UPLOAD CAR DATA
-        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, carDataEdit.getID() >= 0 ? Constant.SERVER_REQ_UPDATE_CAR : Constant.SERVER_REQ_REGISTER_CAR))
+        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), carDataEdit.getID() >= 0 ? Constant.SERVER_REQ_UPDATE_CAR : Constant.SERVER_REQ_REGISTER_CAR))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("name", carDataEdit.getName())
                 .addStringPart("car_num", carDataEdit.getCarNum())
@@ -696,7 +696,7 @@ public class ServerRequest {
                             carResult.update(response);
                             if (pictures.size() > 0) {
                                 PictureData pictureData = pictures.remove(pictures.size() - 1);
-                                Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE))
+                                Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPLOAD_PICTURE))
                                         .addStringPart("login_token", Application.get().getLoginToken())
                                         .addStringPart("car_id", "" + response.getCarData().getID())
 //                                        .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
@@ -721,7 +721,7 @@ public class ServerRequest {
 
     public void requestDeleteCar(final long carID, final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_DELETE_CAR))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_DELETE_CAR))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_id", "" + carID)
                 .withTargetClass(ServerResult.class)
@@ -744,7 +744,7 @@ public class ServerRequest {
 
     public void requestCarList(int page, long offsetCarID, final Response.Listener<CarListResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CAR_LIST))
+        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CAR_LIST))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("page", "" + page);
         if (offsetCarID > 0) {
@@ -765,7 +765,7 @@ public class ServerRequest {
 
     public void requestGetCar(long carID, final Response.Listener<CarResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CAR))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CAR))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("id", "" + carID)
                 .withTargetClass(CarResult.class)
@@ -787,7 +787,7 @@ public class ServerRequest {
 
     public void requestGetCarSmileBuy(long carSmileBuyID, final Response.Listener<GetCarSmileBuyResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_GET_SMILEBUY))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_GET_SMILEBUY))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_smile_buy_id", "" + carSmileBuyID)
                 .withTargetClass(GetCarSmileBuyResult.class)
@@ -809,7 +809,7 @@ public class ServerRequest {
 
     public void requestCarFavorite(long carID, final Response.Listener<CarFavoriteResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CAR_FAVORITE))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CAR_FAVORITE))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_id", "" + carID)
                 .withTargetClass(CarFavoriteResult.class)
@@ -832,7 +832,7 @@ public class ServerRequest {
 
     public void requestCarIsSold(long carID, final Response.Listener<CarIsSoldResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CAR_IS_SOLD))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CAR_IS_SOLD))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_id", "" + carID)
                 .withTargetClass(CarIsSoldResult.class)
@@ -863,7 +863,7 @@ public class ServerRequest {
                 if (response.isSuccess()) {
                     if (pictures.size() > 0) {
                         PictureData pictureData = pictures.remove(pictures.size() - 1);
-                        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE_SMILEBUY))
+                        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPLOAD_PICTURE_SMILEBUY))
                                 .addStringPart("login_token", Application.get().getLoginToken())
                                 .addStringPart("car_smile_buy_id", "" + response.getCarID())
 //                                .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
@@ -882,7 +882,7 @@ public class ServerRequest {
             }
         };
 
-        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, carData.getID() >= 0 ? Constant.SERVER_REQ_UPDATE_CAR_SMILEBUY : Constant.SERVER_REQ_REGISTER_CAR_SMILEBUY))
+        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), carData.getID() >= 0 ? Constant.SERVER_REQ_UPDATE_CAR_SMILEBUY : Constant.SERVER_REQ_REGISTER_CAR_SMILEBUY))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("name", carData.getName())
                 .addStringPart("car_num", carData.getCarNum())
@@ -915,7 +915,7 @@ public class ServerRequest {
                         if (response.isSuccess()) {
                             if (pictures.size() > 0) {
                                 PictureData pictureData = pictures.remove(pictures.size() - 1);
-                                Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_UPLOAD_PICTURE_SMILEBUY))
+                                Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPLOAD_PICTURE_SMILEBUY))
                                         .addStringPart("login_token", Application.get().getLoginToken())
                                         .addStringPart("car_smile_buy_id", "" + response.getCarData().getID())
 //                                        .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
@@ -937,7 +937,7 @@ public class ServerRequest {
 
     public void requestDeleteCarSmileBuy(long carID, final Response.Listener<ServerResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_DELETE_CAR_SMILEBUY))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_DELETE_CAR_SMILEBUY))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_smile_buy_id", "" + carID)
                 .withTargetClass(ServerResult.class)
@@ -959,7 +959,7 @@ public class ServerRequest {
 
     public void requestGetMyCarList(final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_GET_MY_CAR_LIST))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_GET_MY_CAR_LIST))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .withTargetClass(MyCarListResult.class)
                 .withListener(new Response.Listener<MyCarListResult>() {
@@ -987,7 +987,7 @@ public class ServerRequest {
 
     public void requestGetRequestedCarList(final Response.Listener<RequestedCarListResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_GET_REQUESTED_CAR_LIST))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_GET_REQUESTED_CAR_LIST))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .withTargetClass(RequestedCarListResult.class)
                 .withListener(new Response.Listener<RequestedCarListResult>() {
@@ -1013,7 +1013,7 @@ public class ServerRequest {
 
     public void requestMyFavoriteCarList(final Response.Listener<ServerResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_GET_MY_FAVORITE_CAR_LIST))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_GET_MY_FAVORITE_CAR_LIST))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .withTargetClass(MyFavoriteCarListResult.class)
                 .withListener(new Response.Listener<MyFavoriteCarListResult>() {
@@ -1038,7 +1038,7 @@ public class ServerRequest {
 
     public void requestAddComment(long carID, String comment, String filePath, final Response.Listener<CarCommentResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_ADD_COMMENT))
+        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_ADD_COMMENT))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_id", "" + carID)
                 .addStringPart("message", comment);
@@ -1065,7 +1065,7 @@ public class ServerRequest {
 
     public void requestDeleteComment(long commentID, final Response.Listener<CarCommentResult> onSuccess) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_DEL_COMMENT))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_DEL_COMMENT))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("comment_id", "" + commentID)
                 .withTargetClass(CarCommentResult.class)
@@ -1088,7 +1088,7 @@ public class ServerRequest {
 
     public void requestSearchCar(int page, long offsetCarID, String keyword, int priceL, int priceH, int mileageL, int mileageH, int areaCode, boolean hasSmileBuy, int carType, final Response.Listener<CarListResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_CAR_SEARCH))
+        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CAR_SEARCH))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("page", "" + page);
         if (offsetCarID > 0) {
@@ -1135,7 +1135,7 @@ public class ServerRequest {
 
     public void requestSmileMan(long carID, int serviceType, int paymentAmount, final Response.Listener<ServerResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
-        Volleyer.volleyer().post(String.format("%s%s", Constant.SERVER_ADDRESS, Constant.SERVER_REQ_SMILE_MAN))
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_SMILE_MAN))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_id", "" + carID)
                 .addStringPart("service_type", "" + serviceType)

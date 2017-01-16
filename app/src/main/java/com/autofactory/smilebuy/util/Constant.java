@@ -4,6 +4,10 @@ package com.autofactory.smilebuy.util;
  * Created by AirPhebe on 2015. 10. 20..
  */
 public class Constant {
+
+    private static final boolean IS_TEST = true;
+    public static final boolean IS_PLAY_STORE_UPDATE = true;
+
     public static final String URQA_API_KEY = "CFD9819F";
     public static final String SMS_RECEIVE_SENDER = "0318556890";
 
@@ -15,8 +19,18 @@ public class Constant {
 
     //public static final String SERVER_ADDRESS = "http://ec2-52-192-86-68.ap-northeast-1.compute.amazonaws.com";
     //public static final String SERVER_ADDRESS = "http://112.171.55.131:8000";
-    public static final String SERVER_ADDRESS = "http://api.autofactory.or.kr";
-    public static final String CLIENT_OS_TYPE = "android";
+    private static final String SERVER_ADDRESS = "http://api.autofactory.or.kr";
+    private static final String TEST_SERVER_ADDRESS = "http://192.168.0.55:8000";
+
+    public static String getServerUrl() {
+        if(IS_TEST){
+            return TEST_SERVER_ADDRESS;
+        }
+        return SERVER_ADDRESS;
+    }
+
+    private static final String CLIENT_MARKET_TYPE_ANDROID = "android";
+    private static final String CLIENT_MARKET_TYPE_ONE_STORE = "android_one_store";
     public static final int USER_TYPE_USER = 0;          // 0 : normal user, other : manager
 
     public static final int CAR_TYPE_ALL = -1;
@@ -114,14 +128,18 @@ public class Constant {
     public static final int ADD_PICTURE_LIMIT_USER = 10;
     public static final int ADD_PICTURE_LIMIT_MANAGER = 20;
 
-
-
     public static final String PREF_KEY_AUTO_LOGIN = "PREF_KEY_AUTO_LOGIN";
     public static final String PREF_KEY_EMAIL = "PREF_KEY_EMAIL";
     public static final String PREF_KEY_PWD = "PREF_KEY_PWD";
 
-
     public static final float GLIDE_THUMBNAIL_SIZE = 0.2f;
+
+    public static String getMarketType(){
+        if(IS_PLAY_STORE_UPDATE){
+            return CLIENT_MARKET_TYPE_ANDROID;
+        }
+        return CLIENT_MARKET_TYPE_ONE_STORE;
+    }
 
     public enum CheckSmileMan {
         CHOOSE_AREA,
