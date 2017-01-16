@@ -28,6 +28,8 @@
 
                 <ImageView
                     android:id="@+id/mainImage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:scaleType="centerCrop"
                     app:layout_aspectRatio="192%"
                     app:layout_widthPercent="100%"/>
@@ -40,28 +42,14 @@
                 android:src="@drawable/photocard_gradation"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="34dp"
-                android:layout_gravity="bottom"
+                android:layout_gravity="right|bottom"
                 android:background="@color/back_70"
                 android:orientation="horizontal"
-                android:paddingRight="12dp">
-
-                <TextView
-                    android:id="@+id/carName"
-                    fontPath="fonts/NotoBold.otf"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="75dp"
-                    android:maxLines="1"
-                    android:textColor="@color/text_ff"
-                    android:textSize="@dimen/text_50"/>
-
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                android:paddingRight="12dp"
+                android:paddingLeft="12dp"
+                >
 
                 <ImageButton
                     android:id="@+id/favorite"
@@ -147,23 +135,6 @@
                     android:focusableInTouchMode="false"
                     android:src="@drawable/icon_cartype_01"/>
 
-                <TextView
-                    android:id="@+id/price"
-                    fontPath="fonts/ArialBlack.ttf"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:textColor="@color/text_ff"
-                    android:textSize="@dimen/text_70"/>
-
-                <TextView
-                    fontPath="fonts/NotoBold.otf"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/unit_price"
-                    android:textColor="@color/text_ff"
-                    android:textSize="@dimen/text_70"/>
 
                 <Space
                     android:layout_width="0dp"
@@ -179,128 +150,117 @@
                     android:textColor="@color/text_ff"
                     android:textSize="@dimen/text_55"/>
             </LinearLayout>
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:background="@color/back_48"
-            android:minHeight="24dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="78dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="2dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_question_num"
-                    fontPath="fonts/ArialBlack.ttf"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Q1"
-                    android:gravity="center_vertical"
-                    android:textColor="@color/text_ff"
-                    android:textSize="@dimen/text_60"/>
-
-                <TextView
-                    android:id="@+id/question"
-                    fontPath="fonts/NotoBold.otf"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:singleLine="true"
-                    android:textColor="@color/text_ff"
-                    android:textSize="@dimen/text_48"/>
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:layout_marginRight="12dp"
-                android:src="@drawable/triangle"/>
-
         </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:layout_marginRight="20dp"
-            android:minHeight="47dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             >
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/userSelect"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button_trans"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userPic"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile_photo_basic"
+                    android:scaleType="centerCrop"
+                    app:riv_border_color="@color/line_ff"
+                    app:riv_border_width="1px"
+                    app:riv_corner_radius="27dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/carName"
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="#FF383838"
+                    android:textSize="@dimen/text_60"
+                    android:includeFontPadding="false"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_car_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_50"
+                    android:maxLines="1"
+                    android:textColor="#FF888888"
+                    android:text="2015/8 | 5,000km | 디젤 | 서울"
+                    android:includeFontPadding="false"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0"
+                >
+
+                <TextView
+                    android:id="@+id/price"
+                    fontPath="fonts/ArialBlack.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_fe"
+                    android:textSize="@dimen/text_70"/>
+
+                <TextView
+                    fontPath="fonts/NotoBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/unit_price"
+                    android:textColor="@color/text_fe"
+                    android:textSize="@dimen/text_70"/>
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/userName"
                 fontPath="fonts/NotoBold.otf"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="7dp"
-                android:maxLines="2"
-                android:gravity="top"
                 android:textColor="@color/black_40"
                 android:textSize="@dimen/text_50"
-                android:text="JoonhYung So"
-                android:visibility="invisible"
+                android:text=""
+                android:visibility="gone"
                 />
-            <TextView
-                fontPath="fonts/ArialBlack.ttf"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
-                android:text="A"
-                android:textColor="@color/text_66"
-                android:textSize="@dimen/text_60"/>
 
-            <TextView
-                android:id="@+id/answer"
-                fontPath="fonts/NotoReg.otf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:textColor="@color/text_66"
-                android:textSize="@dimen/text_48"/>
         </LinearLayout>
 
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|bottom"
-        android:layout_marginBottom="52dp"
-        android:layout_marginLeft="12dp">
 
-        <ImageButton
-            android:id="@+id/userSelect"
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:background="@drawable/button_trans"
-            android:focusable="false"
-            android:focusableInTouchMode="false"/>
-
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/userPic"
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:background="@drawable/profile_photo_basic"
-            android:scaleType="centerCrop"
-            app:riv_border_color="@color/line_ff"
-            app:riv_border_width="1px"
-            app:riv_corner_radius="27dp"/>
-
-    </FrameLayout>
 
 
     <ImageView
