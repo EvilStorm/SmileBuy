@@ -36,6 +36,8 @@
 
                         <android.support.v4.view.ViewPager
                             android:id="@+id/pictureSlider"
+                            android:layout_height="320dp"
+                            android:layout_width="match_parent"
                             app:layout_aspectRatio="192%"
                             app:layout_widthPercent="100%" />
 
