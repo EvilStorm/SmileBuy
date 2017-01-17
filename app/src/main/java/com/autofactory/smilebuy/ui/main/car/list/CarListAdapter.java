@@ -126,17 +126,8 @@ public class CarListAdapter extends BaseAdapter {
         ((TextView) Utility.getViewHolder(convertView, R.id.date)).setText(item.getDateAsShort());
 
         TextView tv_car_info = Utility.getViewHolder(convertView, R.id.tv_car_info);
-        if(car_info.length() > 0 ) {
-            car_info.delete(0,  car_info.length());
-        }
-        car_info.append(item.getAgeYear());
-        car_info.append("/");
-        car_info.append(item.getAgeMonth());
-        car_info.append(" | " + item.getMileageAsString(mActivity.getResources()));
-        car_info.append(" | " + item.getFuelTypeAsString(mActivity.getResources()));
-        car_info.append(" | " + item.getAreaTypeAsString(mActivity.getResources()));
 
-        tv_car_info.setText(car_info.toString());
+        tv_car_info.setText(getCarInfo(item));
 
         ImageView imageView = Utility.getViewHolder(convertView, R.id.mainImage);
         Glide.with(mActivity)
@@ -274,6 +265,41 @@ public class CarListAdapter extends BaseAdapter {
         }
 
         return convertView;
+    }
+
+    private String getCarInfo(CarData item) {
+        if(car_info.length() > 0 ) {
+            car_info.delete(0,  car_info.length());
+        }
+
+        if(item.getAgeYear() != -1){
+            car_info.append(item.getAgeYear());
+            car_info.append("/");
+            car_info.append(item.getAgeMonth());
+        }
+
+        if(item.getMileage() != -1) {
+            if(car_info.length() > 0){
+                car_info.append(" | ");
+            }
+            car_info.append(item.getMileageAsString(mActivity.getResources()));
+        }
+
+        if(item.getFuelType() != -1) {
+            if(car_info.length() > 0){
+                car_info.append(" | ");
+            }
+            car_info.append(item.getFuelTypeAsString(mActivity.getResources()));
+        }
+
+        if(item.getAreaType() != -1) {
+            if(car_info.length() > 0){
+                car_info.append(" | ");
+            }
+            car_info.append(item.getAreaTypeAsString(mActivity.getResources()));
+        }
+
+        return car_info.toString();
     }
 
     public void updateCarInList(CarData carData) {
