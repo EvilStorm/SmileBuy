@@ -64,12 +64,6 @@ public class NoticeActivity extends NormalActivity {
         list.add(noticeData);
 
         noticeData = new NoticeData();
-        noticeData.setSubject(getString(R.string.notice_title_3));
-        noticeData.setContent(getString(R.string.notice_content_3));
-        noticeData.setDate("2016.08.12");
-        list.add(noticeData);
-
-        noticeData = new NoticeData();
         noticeData.setSubject(getString(R.string.notice_title_2));
         noticeData.setContent(getString(R.string.notice_content_2));
         noticeData.setDate("2016.07.30");
@@ -80,43 +74,6 @@ public class NoticeActivity extends NormalActivity {
         noticeData.setContent(getString(R.string.notice_content_1));
         noticeData.setDate("2016.03.31");
         list.add(noticeData);
-
-
-
-//        noticeData = new NoticeData();
-//        noticeData.setSubject("공지사항 제목 123231");
-//        noticeData.setContent("공지사항이 나와야 한다. 엄청 많이 써볼까 .. 귀찮다");
-//        noticeData.setDate("2016.01.24");
-//
-//        list.add(noticeData);
-//
-//        noticeData = new NoticeData();
-//        noticeData.setSubject("공지사항 제목22 1");
-//        noticeData.setContent("공지사항이 나와야 한다. 엄청 많이 써볼까 .. 귀찮다");
-//        noticeData.setDate("2016.01.24");
-//
-//        list.add(noticeData);
-//
-//        noticeData = new NoticeData();
-//        noticeData.setSubject("공지사항 제목 1411");
-//        noticeData.setContent("공지사항이 나와야 한다.234234청 많이 써볼까 .. 귀찮다");
-//        noticeData.setDate("2016.01.24");
-//
-//        list.add(noticeData);
-//
-//        noticeData = new NoticeData();
-//        noticeData.setSubject("공지사항 제목23423 1");
-//        noticeData.setContent("공지사항이 나와야 한다. 엄청 많423423이 써볼까 .. 귀찮다");
-//        noticeData.setDate("2016.01.24");
-//
-//        list.add(noticeData);
-//
-//        noticeData = new NoticeData();
-//        noticeData.setSubject("12312공지사항 제목 1");
-//        noticeData.setContent("공지사항이 나와야 2342한다. 엄청 많이 234써볼까 .. 귀찮다");
-//        noticeData.setDate("2016.01.24");
-//
-//        list.add(noticeData);
 
         return list;
     }
