@@ -197,17 +197,6 @@ public class CarDetailFragment extends Fragment {
             }
         });
 
-        Button samsungInsuarance = (Button)findViewById(R.id.samsungInsuarance);
-        samsungInsuarance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://direct.samsungfire.com/CR_MyAnycarWeb/overture_index.jsp?OTK=A1608AF0022"));
-                startActivity(intent);
-                getActivity().overridePendingTransition(R.anim.anim_in_from_right, R.anim.anim_stay);
-            }
-        });
-
-
         mCommentImage = (ImageView) findViewById(R.id.commentImage);
         mCommentText = (TextView) findViewById(R.id.commentText);
         ImageButton comment = (ImageButton) findViewById(R.id.comment);

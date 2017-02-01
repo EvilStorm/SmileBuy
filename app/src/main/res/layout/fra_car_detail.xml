@@ -285,18 +285,6 @@
 
         </FrameLayout>
 
-        <Button
-            android:id="@+id/samsungInsuarance"
-            fontPath="fonts/NotoBold.otf"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/button_h"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/button_yellow"
-            android:includeFontPadding="false"
-            android:text="@string/action_samsung_insuarance"
-            android:textColor="@color/text_ff"
-            android:textSize="@dimen/text_50" />
-
         <FrameLayout
             android:id="@+id/interviewTitle"
             android:layout_width="match_parent"
