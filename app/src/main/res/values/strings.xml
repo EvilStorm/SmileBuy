@@ -63,7 +63,7 @@
 
     <!-- Strings related to CarList -->
     <string name="title_car_list">분양차량</string>
-    <string name="prompt_search_car">검색</string>
+    <string name="prompt_search_car">모델명 검색</string>
 
     <!-- Strings related to Car Filter -->
     <string name="title_car_filter">분양차량</string>
