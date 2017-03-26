@@ -13,6 +13,7 @@ import com.autofactory.smilebuy.R;
 import com.autofactory.smilebuy.component.PagerAdapterWithListeners;
 import com.autofactory.smilebuy.data.model.PictureData;
 import com.autofactory.smilebuy.util.Constant;
+import com.autofactory.smilebuy.util.Log;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
@@ -106,13 +107,13 @@ public class CarPictureSlideAdapter extends PagerAdapterWithListeners {
                 }
             });
         }
-
         Glide.with(mActivity)
                 .load(mPictures.get(position).getURL())
                 .thumbnail(Constant.GLIDE_THUMBNAIL_SIZE)
                 .listener(new RequestListener<String, GlideDrawable>() {
                     @Override
                     public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                        Log.e(" ERRO : e.toString()");
                         return false;
                     }
 

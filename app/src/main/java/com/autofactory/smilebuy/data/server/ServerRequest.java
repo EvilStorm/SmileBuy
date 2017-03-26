@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Environment;
 
 
+import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -19,9 +21,11 @@ import com.autofactory.smilebuy.data.model.PictureData;
 import com.autofactory.smilebuy.data.model.UserData;
 import com.autofactory.smilebuy.util.Constant;
 import com.autofactory.smilebuy.util.Log;
+import com.autofactory.smilebuy.util.SendFileToS3;
 import com.autofactory.smilebuy.util.Utility;
 import com.autofactory.smilebuy.util.popup.PopupBase;
 import com.facebook.AccessToken;
+import com.google.gson.Gson;
 import com.navercorp.volleyextensions.volleyer.Volleyer;
 import com.navercorp.volleyextensions.volleyer.builder.PostBuilder;
 
@@ -30,7 +34,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by AirPhebe on 2015. 11. 10..
@@ -580,93 +586,116 @@ public class ServerRequest {
             out.close();
         }catch (FileNotFoundException e){
             e.printStackTrace();
+            return null;
         }catch(IOException e2){
             e2.printStackTrace();
+            return null;
         }
 
         return tempFile;
     }
 
-    public void requestRegisterCar(CarDataEdit carDataEdit, final Response.Listener<RegisterCarResult> onSuccess) {
-        Utility.showProgressDialog(Application.get().getActivity());
+    private List<PictureData> uploadImages;
+    private ArrayList<String> uploadImageNames = new ArrayList<String>();
 
-        // REGISTER CAR
-        final RegisterCarResult carResult = new RegisterCarResult();
+    private void deleteCarImages() {
 
-        // 3. DELETE PICTURES
-        final List<Long> toRemoveIDs = new ArrayList<>(carDataEdit.getToRemoveOnServerPictures());
-        final Response.Listener<ServerResult> deletePictureResultListener = new Response.Listener<ServerResult>() {
-            @Override
-            public void onResponse(ServerResult response) {
-                if (response.isSuccess()) {
-                    if (toRemoveIDs.size() > 0) {
-                        long removeID = toRemoveIDs.remove(toRemoveIDs.size() - 1);
-                        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_DELETE_PICTURE))
-                                .addStringPart("login_token", Application.get().getLoginToken())
-                                .addStringPart("image_id", "" + removeID)
-                                .withTargetClass(ServerResult.class)
-                                .withListener(this)
-                                .execute();
-                    } else {
-                        Utility.hideProgressDialog();
-                        if (onSuccess != null) {
-                            onSuccess.onResponse(carResult);
-                        }
-                    }
-                } else {
-                    Utility.hideProgressDialog();
-                    mServerErrorListener.onResponse(response);
-                }
-            }
-        };
-
-        // 2. UPLOAD PICTURES
-        final List<PictureData> pictures = new ArrayList<>(carDataEdit.getPictures());
-        for (int i = pictures.size() - 1; i >= 0; i--) {
-            if (pictures.get(i).isOnServer()) {
-                pictures.remove(i);
-            }
+        if(carDataEdit.getToRemoveOnServerPictures() == null || carDataEdit.getToRemoveOnServerPictures().size() == 0) {
+            uploadImageNames.clear();
+            uploadCarImages();
+            return;
         }
-        final Response.Listener<UploadPictureResult> uploadPictureResultListener = new Response.Listener<UploadPictureResult>() {
-            @Override
-            public void onResponse(UploadPictureResult response) {
-                if (response.isSuccess()) {
-                    if (pictures.size() > 0) {
-                        PictureData pictureData = pictures.remove(pictures.size() - 1);
-                        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPLOAD_PICTURE))
-                                .addStringPart("login_token", Application.get().getLoginToken())
-                                .addStringPart("car_id", "" + response.getCarID())
-//                                .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
-                                .addFilePart("image", makeThumnail(Uri.parse(pictureData.getURL()).getPath()))
 
-                                .withTargetClass(UploadPictureResult.class)
-                                .withListener(this)
-                                .execute();
-                    } else {
-                        if (toRemoveIDs.size() > 0) {
-                            long removeID = toRemoveIDs.remove(toRemoveIDs.size() - 1);
-                            Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_DELETE_PICTURE))
-                                    .addStringPart("login_token", Application.get().getLoginToken())
-                                    .addStringPart("image_id", "" + removeID)
-                                    .withTargetClass(ServerResult.class)
-                                    .withListener(deletePictureResultListener)
-                                    .execute();
-                        } else {
-                            Utility.hideProgressDialog();
-                            if (onSuccess != null) {
-                                onSuccess.onResponse(carResult);
-                            }
-                        }
+        Gson gson = new Gson();
+
+        PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), carDataEdit.getID() >= 0 ? Constant.SERVER_REQ_UPDATE_CAR : Constant.SERVER_REQ_REGISTER_CAR))
+                .addStringPart("login_token", Application.get().getLoginToken())
+                .addStringPart("image_ids", gson.toJson(carDataEdit.getToRemoveOnServerPictures()));
+        postBuilder.withTargetClass(ServerResult.class)
+                .withListener(new Response.Listener<ServerResult>() {
+                    @Override
+                    public void onResponse(ServerResult response) {
+                        uploadImageNames.clear();
+                        uploadCarImages();
                     }
-                } else {
-                    Utility.hideProgressDialog();
-                    mServerErrorListener.onResponse(response);
-                    requestDeleteCar(response.getCarID(), null);
+                })
+                .execute();
+    }
+
+
+    private String getFileExtension(String fileName) {
+        String extension = "";
+
+        int i = fileName.lastIndexOf('.');
+        if (i > 0) {
+            extension = fileName.substring(i+1);
+        }
+        return extension;
+    }
+
+    private String generateTempPwd() {
+        int pwdLength = 4;
+        String codeChars = "abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ";
+        StringBuffer result = new StringBuffer();
+
+        Random rand = new Random();
+        for (int i = 0; i < pwdLength; i++) {
+            result.append(codeChars.charAt(rand.nextInt(codeChars.length())));
+        }
+
+        return result.toString();
+    }
+
+    private void uploadCarImages() {
+        if(uploadImages == null || uploadImages.size() == 0) {
+
+            uploadCarData(carDataEdit, onSuccess);
+            return;
+        }
+
+
+        final SendFileToS3 s3 = new SendFileToS3(Application.get().getActivity());
+        PictureData pictureData = uploadImages.remove(uploadImages.size() - 1);
+
+        if(pictureData.getURL().startsWith("http")) {
+            uploadImageNames.add(pictureData.getURL());
+            uploadCarImages();
+            return;
+        }
+
+        final File image = makeThumnail(Uri.parse(pictureData.getURL()).getPath());
+
+
+        final String uploadFileName = Calendar.getInstance().getTimeInMillis() + "_" +  carDataEdit.getUser().getID()+"_" + generateTempPwd() + "." + getFileExtension(image.getName());
+
+        s3.setFileToUpload(uploadFileName, image);
+
+        SendFileToS3.SendFileToS3Listener listener = new SendFileToS3.SendFileToS3Listener(){
+            @Override
+            public void onStateChange(TransferState state) {
+
+                if(state == TransferState.COMPLETED) {
+                    uploadImageNames.add(uploadFileName);
+                    uploadCarImages();
                 }
+            }
+
+            @Override
+            public void onProgress(int per) {
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+                uploadCarImages();
             }
         };
 
-        // 1. UPLOAD CAR DATA
+        s3.setListener(listener);
+    }
+
+    public void uploadCarData(CarDataEdit carDataEdit, final Response.Listener<RegisterCarResult> onSuccess) {
+        final RegisterCarResult carResult = new RegisterCarResult();
         PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), carDataEdit.getID() >= 0 ? Constant.SERVER_REQ_UPDATE_CAR : Constant.SERVER_REQ_REGISTER_CAR))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("name", carDataEdit.getName())
@@ -683,6 +712,7 @@ public class ServerRequest {
                 .addStringPart("car_type", "" + carDataEdit.getCarType())
                 .addStringPart("additional", carDataEdit.getAdditional())
                 .addStringPart("interview_string", carDataEdit.getInterviewAsJson())
+                .addStringPart("images", uploadImageNames.toString())
                 .addStringPart("can_smile_buy", "" + Utility.getServerIntFromBoolean(carDataEdit.isCanSmileBuy()));
         if (carDataEdit.getID() >= 0) {
             postBuilder = postBuilder.addStringPart("car_id", "" + carDataEdit.getID());
@@ -694,21 +724,9 @@ public class ServerRequest {
                         //Utility.hideProgressDialog();
                         if (response.isSuccess()) {
                             carResult.update(response);
-                            if (pictures.size() > 0) {
-                                PictureData pictureData = pictures.remove(pictures.size() - 1);
-                                Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPLOAD_PICTURE))
-                                        .addStringPart("login_token", Application.get().getLoginToken())
-                                        .addStringPart("car_id", "" + response.getCarData().getID())
-//                                        .addFilePart("image", new File(Uri.parse(pictureData.getURL()).getPath()))
-                                        .addFilePart("image", makeThumnail(Uri.parse(pictureData.getURL()).getPath()))
-                                        .withTargetClass(UploadPictureResult.class)
-                                        .withListener(uploadPictureResultListener)
-                                        .execute();
-                            } else {
-                                Utility.hideProgressDialog();
-                                if (onSuccess != null) {
-                                    onSuccess.onResponse(carResult);
-                                }
+                            Utility.hideProgressDialog();
+                            if (onSuccess != null) {
+                                onSuccess.onResponse(carResult);
                             }
                         } else {
                             Utility.hideProgressDialog();
@@ -717,6 +735,26 @@ public class ServerRequest {
                     }
                 })
                 .execute();
+    }
+
+
+    private CarDataEdit carDataEdit;
+    private Response.Listener<RegisterCarResult> onSuccess;
+
+    public void requestRegisterCar(CarDataEdit carDataEdit, final Response.Listener<RegisterCarResult> onSuccess) {
+
+        this.carDataEdit = carDataEdit;
+        this.onSuccess = onSuccess;
+        final List<PictureData> pictures = new ArrayList<>(carDataEdit.getPictures());
+        this.uploadImages = pictures;
+
+        Utility.showProgressDialog(Application.get().getActivity());
+
+        //1. Delete Car Images
+        //2. Upload Car Images
+        //3. Upload Car Data
+        deleteCarImages();
+
     }
 
     public void requestDeleteCar(final long carID, final Response.Listener<ServerResult> onSuccess) {

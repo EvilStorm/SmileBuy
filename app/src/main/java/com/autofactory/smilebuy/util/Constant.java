@@ -5,11 +5,13 @@ package com.autofactory.smilebuy.util;
  */
 public class Constant {
 
-    private static final boolean IS_TEST = false;
+    private static final boolean IS_TEST = true;
     public static final boolean IS_PLAY_STORE_UPDATE = true;
 
     public static final String URQA_API_KEY = "CFD9819F";
     public static final String SMS_RECEIVE_SENDER = "0318556890";
+
+    public static final String IMAGE_DOMAIN_S3_TOKYO = "http://smilebuy-image.s3.amazonaws.com/";
 
     public static final int REQUEST_CODE_FINISH_ACTIVITY = 99999;
 
@@ -18,9 +20,9 @@ public class Constant {
     public static final int CLIENT_TYPE = CLIENT_TYPE_USER;
 
     //public static final String SERVER_ADDRESS = "http://ec2-52-192-86-68.ap-northeast-1.compute.amazonaws.com";
-    //public static final String SERVER_ADDRESS = "http://112.171.55.131:8000";
+    //public static final String SERVER_ADDRESIMAGE_DOMAIN_S3_TOKYOS = "http://112.171.55.131:8000";
     private static final String SERVER_ADDRESS = "http://api.autofactory.or.kr";
-    private static final String TEST_SERVER_ADDRESS = "http://192.168.0.55:8000";
+    private static final String TEST_SERVER_ADDRESS = "http://192.168.0.4:8080";
 
     public static String getServerUrl() {
         if(IS_TEST){

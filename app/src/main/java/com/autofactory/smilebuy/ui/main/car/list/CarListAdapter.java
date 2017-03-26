@@ -30,6 +30,9 @@ import com.autofactory.smilebuy.util.Log;
 import com.autofactory.smilebuy.util.Utility;
 import com.autofactory.smilebuy.util.popup.PopupBase;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 

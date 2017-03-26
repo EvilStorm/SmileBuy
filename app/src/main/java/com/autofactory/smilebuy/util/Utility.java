@@ -54,6 +54,7 @@ import java.util.List;
  */
 public class Utility {
 
+    public static SimpleDateFormat DATE_FORMAT_FULL = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     /**
      * Helper for View Holder
      */

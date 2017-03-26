@@ -1,9 +1,12 @@
 package com.autofactory.smilebuy.ui.login;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
 
 import com.android.volley.Response;
 import com.autofactory.smilebuy.R;
@@ -35,6 +38,8 @@ public class SplashActivity extends NormalActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
 
         checkPermissions();
+
+        verifyStoragePermissions();
     }
 
     private void checkPermissions() {
@@ -55,11 +60,34 @@ public class SplashActivity extends NormalActivity {
             }
         };
 
+
         new TedPermission(this)
                 .setPermissionListener(permissionListener)
                 .setDeniedMessage(R.string.popup_message_permission_denied)
-                .setPermissions(Manifest.permission.READ_PHONE_STATE, Manifest.permission.CALL_PHONE, Manifest.permission.RECEIVE_SMS, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .setPermissions(
+                        Manifest.permission.READ_PHONE_STATE, Manifest.permission.CALL_PHONE,
+                        Manifest.permission.RECEIVE_SMS, Manifest.permission.WRITE_EXTERNAL_STORAGE
+                )
                 .check();
+    }
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+
+    private void verifyStoragePermissions() {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    this,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
     }
 
     private void startSmileBuy() {

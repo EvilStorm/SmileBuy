@@ -22,6 +22,8 @@ android {
         versionName "0.9.6"
 
         resConfig "ko"
+        multiDexEnabled true
+
 
     }
     buildTypes {
@@ -105,10 +107,14 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.5.5') {
         transitive = true;
     }
-
+    compile 'com.amazonaws:aws-android-sdk-core:2.2.+'
+    compile 'com.amazonaws:aws-android-sdk-s3:2.2.+'
+    compile 'com.amazonaws:aws-android-sdk-ddb:2.2.+'
+    compile 'com.amazonaws:aws-android-sdk-cognito:2.2.+'
 
     compile 'com.github.ParkSangGwon:TedPermission:v1.0.8'
 
+    compile 'com.android.support:multidex:1.0.1'
 
     apply plugin: 'com.google.gms.google-services'
 }

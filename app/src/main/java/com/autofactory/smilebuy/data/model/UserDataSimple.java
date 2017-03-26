@@ -6,6 +6,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.autofactory.smilebuy.R;
+import com.autofactory.smilebuy.util.Constant;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
@@ -120,7 +121,13 @@ public class UserDataSimple implements Parcelable {
 
     public String getNickName() { return mNickName; }
 
-    public String getProfilePic() { return mProfilePic; }
+    public String getProfilePic() {
+        if(mProfilePic!= null && !mProfilePic.toLowerCase().startsWith("http")) {
+            mProfilePic = Constant.IMAGE_DOMAIN_S3_TOKYO + mProfilePic;
+        }
+        return mProfilePic;
+
+    }
 
     public String getDate() {
         return mDate;

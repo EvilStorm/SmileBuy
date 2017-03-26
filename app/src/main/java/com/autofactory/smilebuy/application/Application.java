@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.multidex.MultiDex;
 import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 
@@ -297,6 +298,11 @@ public class Application extends android.app.Application {
         editor.commit();
     }
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
     @Override
     public void onCreate() {
