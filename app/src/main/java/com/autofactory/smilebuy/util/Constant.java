@@ -21,7 +21,8 @@ public class Constant {
 
     //public static final String SERVER_ADDRESS = "http://ec2-52-192-86-68.ap-northeast-1.compute.amazonaws.com";
     //public static final String SERVER_ADDRESIMAGE_DOMAIN_S3_TOKYOS = "http://112.171.55.131:8000";
-    private static final String SERVER_ADDRESS = "http://api.autofactory.or.kr";
+//    private static final String SERVER_ADDRESS = "http://api.autofactory.or.kr";
+    private static final String SERVER_ADDRESS = "http://smilebuy.ap-northeast-2.elasticbeanstalk.com";
     private static final String TEST_SERVER_ADDRESS = "http://192.168.0.4:8080";
 
     public static String getServerUrl() {
