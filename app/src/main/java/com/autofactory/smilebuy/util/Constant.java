@@ -5,7 +5,7 @@ package com.autofactory.smilebuy.util;
  */
 public class Constant {
 
-    private static final boolean IS_TEST = true;
+    private static final boolean IS_TEST = false;
     public static final boolean IS_PLAY_STORE_UPDATE = true;
 
     public static final String URQA_API_KEY = "CFD9819F";
