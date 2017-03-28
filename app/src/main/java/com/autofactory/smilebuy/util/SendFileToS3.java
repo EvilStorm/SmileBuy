@@ -33,7 +33,9 @@ public class SendFileToS3 {
     private SendFileToS3Listener listener;
 
     private String POOL_ID = "ap-northeast-2:1e95cbea-81f8-4453-a545-95972b339ef6";
-    private String BUCKET_PATH = "smilebuy-seoul/smilebuy";
+    private String BUCKET_PATH_CAR = "smilebuy-seoul/cars";
+    private String BUCKET_PATH_COMMENT = "smilebuy-seoul/comment";
+    private String BUCKET_PATH_USER = "smilebuy-seoul/user";
 
     // Storage Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -99,14 +101,30 @@ public class SendFileToS3 {
         transferUtility = new TransferUtility(s3, context);
     }
 
+    public static final int TYPE_CAR = 1;
+    public static final int TYPE_COMMENT = 2;
+    public static final int TYPE_USER = 3;
+
+    private String getBucketPath(int type) {
+        switch (type) {
+            case TYPE_CAR:
+                return BUCKET_PATH_CAR;
+            case TYPE_COMMENT:
+                return BUCKET_PATH_COMMENT;
+            case TYPE_USER:
+                return BUCKET_PATH_USER;
+            default:
+                return BUCKET_PATH_CAR;
+        }
+    }
     /**
      * This method is used to upload the file to S3 by using TransferUtility class
      * @param
      */
-    public void setFileToUpload(String fileName, File uploadFile){
+    public void setFileToUpload(String fileName, File uploadFile, int type ){
         Log.i(" Upload File Name :  " + fileName);
         TransferObserver transferObserver = transferUtility.upload(
-                BUCKET_PATH,     /* The bucket to upload to */
+                getBucketPath(type),     /* The bucket to upload to */
                 fileName,       /* The key for the uploaded object */
                 uploadFile       /* The file where the data to upload exists */
         );

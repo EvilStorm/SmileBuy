@@ -143,7 +143,7 @@ public class UserProfileSettingActivity extends NormalActivity {
                 }, new PopupBase.OnClickListener() {
                     @Override
                     public void onClick() {
-                        ServerRequest.get().requestUpdateProfilePic(null, new Response.Listener<UserDataUpdatedResult>() {
+                        ServerRequest.get().requestUpdateProfilePic(null, false, new Response.Listener<UserDataUpdatedResult>() {
                             @Override
                             public void onResponse(UserDataUpdatedResult response) {
                                 Glide.with(UserProfileSettingActivity.this)
@@ -190,7 +190,7 @@ public class UserProfileSettingActivity extends NormalActivity {
             if (resultCode == Activity.RESULT_OK && data != null) {
                 List<String> pictureList = data.getStringArrayListExtra(PhotoPickerActivity.KEY_SELECTED_PHOTOS);
                 if (pictureList != null && pictureList.size() > 0) {
-                    ServerRequest.get().requestUpdateProfilePic("file:///" + pictureList.get(0), new Response.Listener<UserDataUpdatedResult>() {
+                    ServerRequest.get().requestUpdateProfilePic("file:///" + pictureList.get(0), false, new Response.Listener<UserDataUpdatedResult>() {
                         @Override
                         public void onResponse(UserDataUpdatedResult response) {
                             Glide.with(UserProfileSettingActivity.this)

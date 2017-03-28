@@ -117,7 +117,7 @@ public class CommentActivity extends NormalActivity {
         mSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ServerRequest.get().requestAddComment(mCarData.getID(), mComment.getText().toString(), mImageFilePath, new Response.Listener<CarCommentResult>() {
+                ServerRequest.get().requestAddComment(mCarData.getID(), mComment.getText().toString(), mImageFilePath, false, new Response.Listener<CarCommentResult>() {
                     @Override
                     public void onResponse(CarCommentResult response) {
                         mCarData.update(response.getCarData());

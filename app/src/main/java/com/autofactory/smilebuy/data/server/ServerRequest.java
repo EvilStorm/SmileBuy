@@ -418,14 +418,53 @@ public class ServerRequest {
         }
     }
 
-    public void requestUpdateProfilePic(String filePath, final Response.Listener<UserDataUpdatedResult> onSuccess) {
+    private void uploadProfileImage(final String filePath, final Response.Listener<UserDataUpdatedResult> onSuccess) {
+        Utility.showProgressDialog(Application.get().getActivity());
+
+        final SendFileToS3 s3 = new SendFileToS3(Application.get().getActivity());
+        final File image = makeThumnail(Uri.parse(filePath).getPath());
+
+        final String uploadFileName = Calendar.getInstance().getTimeInMillis() + "_" +  generateTempPwd() + "." + getFileExtension(image.getName());
+
+        s3.setFileToUpload(uploadFileName, image, SendFileToS3.TYPE_USER);
+
+        SendFileToS3.SendFileToS3Listener listener = new SendFileToS3.SendFileToS3Listener(){
+            @Override
+            public void onStateChange(TransferState state) {
+                if(state == TransferState.COMPLETED) {
+                    Log.e("on Error requestAddComment COMPLETED ");
+                    requestUpdateProfilePic(uploadFileName, true, onSuccess);
+                }
+            }
+
+            @Override
+            public void onProgress(int per) {
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Log.e("on Error requestAddComment ");
+                requestUpdateProfilePic(uploadFileName, true, onSuccess);
+            }
+        };
+
+        s3.setListener(listener);
+
+    }
+
+    public void requestUpdateProfilePic(String filePath, boolean isUploadImage, final Response.Listener<UserDataUpdatedResult> onSuccess) {
         if (filePath == null || filePath.length() <= 0) {
             requestResetProfilePic(onSuccess);
         } else {
+            if(!isUploadImage) {
+                uploadProfileImage(filePath, onSuccess);
+                return;
+            }
             Utility.showProgressDialog(Application.get().getActivity());
             Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_UPDATE_USER_PROFILE_PIC))
                     .addStringPart("login_token", Application.get().getLoginToken())
-                    .addFilePart("profile_picture", new File(Uri.parse(filePath).getPath()))
+                    .addStringPart("profile_picture", filePath)
                     .withTargetClass(UserDataUpdatedResult.class)
                     .withListener(new Response.Listener<UserDataUpdatedResult>() {
                         @Override
@@ -567,6 +606,7 @@ public class ServerRequest {
     }
 
     private File makeThumnail(String filePath){
+        Log.e("make THumnail filePath : " + filePath);
 
         Bitmap bitmap = getBitmap(filePath);
         String[] fileName = filePath.split("/");
@@ -668,7 +708,7 @@ public class ServerRequest {
 
         final String uploadFileName = Calendar.getInstance().getTimeInMillis() + "_" +  carDataEdit.getUser().getID()+"_" + generateTempPwd() + "." + getFileExtension(image.getName());
 
-        s3.setFileToUpload(uploadFileName, image);
+        s3.setFileToUpload(uploadFileName, image,SendFileToS3.TYPE_CAR);
 
         SendFileToS3.SendFileToS3Listener listener = new SendFileToS3.SendFileToS3Listener(){
             @Override
@@ -1074,15 +1114,62 @@ public class ServerRequest {
                 .execute();
     }
 
-    public void requestAddComment(long carID, String comment, String filePath, final Response.Listener<CarCommentResult> onSuccess) {
+    private void uploadCommentImage(final long carID, final String comment, String filePath, final Response.Listener<CarCommentResult> onSuccess) {
+        Utility.showProgressDialog(Application.get().getActivity());
+
+        final SendFileToS3 s3 = new SendFileToS3(Application.get().getActivity());
+        final File image = makeThumnail(Uri.parse(filePath).getPath());
+
+        final String uploadFileName = Calendar.getInstance().getTimeInMillis() + "_" +  carID+"_" + generateTempPwd() + "." + getFileExtension(image.getName());
+
+        s3.setFileToUpload(uploadFileName, image, SendFileToS3.TYPE_COMMENT);
+
+        SendFileToS3.SendFileToS3Listener listener = new SendFileToS3.SendFileToS3Listener(){
+            @Override
+            public void onStateChange(TransferState state) {
+                if(state == TransferState.COMPLETED) {
+                    Log.e("on Error requestAddComment COMPLETED ");
+                    requestAddComment(carID, comment, uploadFileName, true, onSuccess);
+                }
+            }
+
+            @Override
+            public void onProgress(int per) {
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Log.e("on Error requestAddComment ");
+                requestAddComment(carID, comment, null, true, onSuccess);
+            }
+        };
+
+        s3.setListener(listener);
+
+    }
+
+    public void requestAddComment(long carID, String comment, String filePath, boolean isUploadedImage, final Response.Listener<CarCommentResult> onSuccess) {
+        if(!isUploadedImage) {
+            if(filePath != null && filePath.length() > 0 ){
+                uploadCommentImage(carID, comment, filePath, onSuccess);
+                return;
+            }
+        }
+
+        if(filePath == null ) {
+            filePath = "";
+        }
+
         Utility.showProgressDialog(Application.get().getActivity());
         PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_ADD_COMMENT))
                 .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("car_id", "" + carID)
-                .addStringPart("message", comment);
-        if (filePath != null && filePath.length() > 0) {
-            postBuilder = postBuilder.addFilePart("picture", (filePath == null || filePath.length() <= 0) ? null : new File(Uri.parse(filePath).getPath()));
-        }
+                .addStringPart("message", comment)
+                .addStringPart("picture", filePath);
+//        if (filePath != null && filePath.length() > 0) {
+//            postBuilder = postBuilder.addFilePart("picture", (filePath == null || filePath.length() <= 0) ? null : new File(Uri.parse(filePath).getPath()));
+//        }
         postBuilder.withTargetClass(CarCommentResult.class)
                 .withListener(new Response.Listener<CarCommentResult>() {
                     @Override
