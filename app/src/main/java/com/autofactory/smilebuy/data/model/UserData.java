@@ -4,10 +4,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -134,6 +130,9 @@ public class UserData extends UserDataFriend {
     }
 
     public boolean isMyRequestedCar(long carID) {
+        if(mRequestCarList == null) {
+            return false;
+        }
         for(int i=0; i<mRequestCarList.size(); i++) {
             if(mRequestCarList.get(i).getID() == carID) {
                 return true;
