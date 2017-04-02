@@ -594,9 +594,13 @@ public class ServerRequest {
                 })
                 .execute();
     }
-
+    private Bitmap bitmap;
     private Bitmap getBitmap(String filePath){
-        Bitmap bitmap = null;
+
+        if(bitmap != null && !bitmap.isRecycled()) {
+            bitmap.recycle();
+        }
+
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 2;
 
@@ -631,6 +635,8 @@ public class ServerRequest {
             e2.printStackTrace();
             return null;
         }
+
+        bitmap.recycle();
 
         return tempFile;
     }
