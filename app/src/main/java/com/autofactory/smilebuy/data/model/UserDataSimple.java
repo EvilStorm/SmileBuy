@@ -5,12 +5,12 @@ import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.autofactory.smilebuy.R;
 import com.autofactory.smilebuy.util.Constant;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by AirPhebe on 2015. 11. 11..
@@ -132,17 +132,19 @@ public class UserDataSimple implements Parcelable {
     public String getDate() {
         return mDate;
     }
+
     public String getDateWithUnit(Context context) {
-        if(mDate == null || mDate.length() <= 0)    return "";
-        String [] s1 = mDate.split(" ");
-        if(s1 == null || s1.length <= 1)    return "";
-        String [] s2 = s1[0].split("-");
-        if(s2 == null || s2.length <= 2)     return "";
-        if(context == null) {
-            return String.format("%s/%s/%s", s2[0], s2[1], s2[2]);
-        } else {
-            return String.format("%s%s %s%s %s%s", s2[0], context.getString(R.string.unit_year), s2[1], context.getString(R.string.unit_month), s2[2], context.getString(R.string.unit_day));
+        Date date = null;
+        try {
+            date = new Date(Long.parseLong(mDate));
+        } catch (NumberFormatException e) {
+            return "";
         }
+
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
+        return dateFormat.format(c.getTime());
     }
 
     public String getProfileBG() {
