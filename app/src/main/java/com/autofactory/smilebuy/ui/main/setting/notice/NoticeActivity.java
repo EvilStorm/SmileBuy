@@ -52,6 +52,12 @@ public class NoticeActivity extends NormalActivity {
         NoticeData noticeData = null;
 
         noticeData = new NoticeData();
+        noticeData.setSubject(getString(R.string.notice_title_6));
+        noticeData.setContent(getString(R.string.notice_content_6));
+        noticeData.setDate("2017.04.28");
+        list.add(noticeData);
+
+        noticeData = new NoticeData();
         noticeData.setSubject(getString(R.string.notice_title_4));
         noticeData.setContent(getString(R.string.notice_content_4));
         noticeData.setDate("2017.01.17");
