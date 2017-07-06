@@ -2,256 +2,812 @@
 <items version="2" >
 
     <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
         jumboMode="false"
-        revision="23.0.3"
-        sha1="debf30ce0a7560396b6235edef77e447006454c2">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-recyclerview-v7-23.3.0_52cb9286ddc53575a64072e0d8cfa3b9302dbd14.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/internal_impl-23.3.0_401d70f3e8ba00445f63c8155c43d3eaf79289fd.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="814fc0c3ec69a944add398217d90077301501a74">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.makeramen-roundedimageview-2.2.1_33c91456fb9fb198ce80291dd135f45a43182f3f.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-23.3.0_87d07919e75043ccb7b041365a7ef1bb611f4c66.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.6/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="9af3b9b8114e685291aa00e6572b0a9131244956">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-answers-1.3.6_ca4504a6ec388326188a7bcea49d5625d1f5141b.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.navercorp.pulltorefresh/library/3.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="e81a90331089d2f9018e493b0fdd6bab92fae40c">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.navercorp.pulltorefresh-library-3.2.0_e1596b0db7d85d6b80715573a5923c98a967ca01.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/org.lucasr.twowayview/twowayview/0.1.4/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/org.lucasr.twowayview-twowayview-0.1.4_f8b11990604cea9258e7b15560dde8909b4e0048.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/support-annotations-23.3.0_502726471de4465240fd2332438f1b95dd056399.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.0/a7537446a030da8eb0da4c71424d16c2589f6c4a/glide-3.6.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/glide-3.6.0_34a850742a6587a8f7c2da5a69c9e596d18325e3.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/jackson-annotations-2.2.2_4e8fb963d7f35b4c6aaac548a1e5a0a7591fac78.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-basement-8.4.0_049ddb934633a382dc00c1760cc491a099b0fded.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.8/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="c9ef45dcbd082cd63aac09a5e2cd443adb5df837">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-crashlytics-core-2.3.8_e4a29304f132cdea0b1422307ac7dbb3e3d278a4.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.1.4/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ad5bb101ced4d3939225c9b57e5a3d81547c1fbb">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-beta-1.1.4_2313dc8727a321cd1a9e812ebd846c19514f7ca5.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-design-23.3.0_3d90987dc0ea3b780a6d5cf14d1e0ca7b59b5ea4.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-measurement-8.4.0_01540b7f90133e400181e105aa3a91181f0e7af2.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.melnykov/floatingactionbutton/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="8c6ebb7d087d1a30bf84356bd2aecf85309fc024">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.melnykov-floatingactionbutton-1.3.0_f3b9e45dabd37c9d1676e326b780df3587105583.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/jackson-databind-2.2.2_2937e15d34b8032057d0e139cdb00cd1a65bc694.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.commit451/PhotoView/1.2.4/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="890be6e1e56a883c9b407a11e067a61886dec123">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.commit451-PhotoView-1.2.4_105431723099fb0fc1c4e28ccecd8656cebac8ad.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-23.3.0_4519a7d9b2433dce8b9c945c0a4e1a4f154981d5.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/percent/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="de44758258139805d12d5d023b04f58e2010dacc">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-percent-23.3.0_3b36c8ca381ba88133a25d178bd48be815340304.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.5.5/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="611605b6b640c1558f9bdea41de8ff837ab68ca8">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.crashlytics.sdk.android-crashlytics-2.5.5_f176d5921457d72886c9aea0211991d7edaae0cd.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.github.ParkSangGwon/TedPermission/v1.0.8/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="14e7bbfac64eed16949bc40146218dfc315c5a05">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.github.ParkSangGwon-TedPermission-v1.0.8_e7a5e40db4b9504eaf2d46106a0a24d280bfed22.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-analytics-8.4.0_404528551d93ec93a807bac6b439bd91a5e7c2f8.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.facebook.android-facebook-android-sdk-4.6.0_250879c87d2a1b94f6a209c8f1f8d3b86358f7cd.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/library-2.4.0_3e449f105225e5a408042672be052fa667321097.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.10/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="a5db9a2dd46d84285ef737f65030b74b6e8ee2a4">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/io.fabric.sdk.android-fabric-1.3.10_13b558aee60bb6f1167c52b8b7f1682be17e5642.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/jackson-core-2.2.2_22048ddbeb5df216bdb11c36e7588cfefb8f1ca6.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-23.3.0_b46469d1d9a09ee2c567dd08495a22816b729632.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.navercorp.volleyextensions/volleyer/2.0.0/b99d1aa16ba8f3d30e41ae270707b38ceea4f31a/volleyer-2.0.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="b99d1aa16ba8f3d30e41ae270707b38ceea4f31a">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/volleyer-2.0.0_1de5a7aab8d60eea2501f6c5ecbffaaa1f2a9407.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/uk.co.chrisjenx/calligraphy/2.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/uk.co.chrisjenx-calligraphy-2.1.0_65329c204ab7d8418c1cd8b6670407f6e62ba689.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/bolts-android-1.2.0_9d783f04bd63495a54e71eb5d2419acc275e3845.jar" />
-    </item>
-    <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
-        jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/library-1.0.19_edbaf428fce2af9e977ae87d9397e527c5303611.jar" />
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\library-1.0.19_78f0bb23743784ba5177d1b9659f6fa6d6a7bd06.jar" />
     </item>
     <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-23.3.0_707ca6a64e16d411a8219d843135bfd29f943196.jar" />
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\1e6cc98bb622747f0006ae222502a621ebc13922\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c9ef45dcbd082cd63aac09a5e2cd443adb5df837">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6dd4c98487bd412f87fbb6612f00c226b73ae705\classes.dex" />
     </item>
     <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/exploded-aar/me.iwf.photopicker/PhotoPicker/0.2.9/jars/classes.jar"
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.navercorp.volleyextensions\volleyer\2.0.0\b99d1aa16ba8f3d30e41ae270707b38ceea4f31a\volleyer-2.0.0.jar"
         jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b99d1aa16ba8f3d30e41ae270707b38ceea4f31a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\volleyer-2.0.0_5ec55a3836951d1771d7f1a2374712b19ffe5937.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\3959582c319d6881cdc83e3964eb37b1385c67b0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a5db9a2dd46d84285ef737f65030b74b6e8ee2a4">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8329208a833a9498bb4da11497e3d62de89d0d0c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-databind-2.2.2_34cebb7d9c0f05222a7630657f0a6116e850f5cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\f926c5bf9b52122842804912331509066b174b2a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_3dab44cceb661a8aa507ff12392a9c243feb75c4.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-android-1.2.0_ede0b8a94af6cb01cdff1f06032d95338df7c93c\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.0\a7537446a030da8eb0da4c71424d16c2589f6c4a\glide-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\glide-3.6.0_660a6f025f5601321e88b4acb58e9f0734e3c85e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
         revision="23.0.3"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0_ede0b8a94af6cb01cdff1f06032d95338df7c93c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\library-2.4.0_dd460f45d27a359687729c3c169358b1eda3100b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.2.2_3f36bdc4e3c1814b9dee5e0d90f4077ea814d37a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\eb9098a6d559d14b2ba0f046e8e45186439c1357\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8c6ebb7d087d1a30bf84356bd2aecf85309fc024">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f6562bb3b348ece55c870ea182ee6ff625d69e96\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\56ddebcef36d6570436ec7f1ef8a95538c172a4a\output\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_d7ad3d641334ba1b25cd302f6f42e13495d19913.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidSDK\Studio\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.3.0_09d01dc463b5153e615ead663d1a0cb0c81ac7f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\7a48725884bad7f19655029084a7a0520bf5957a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3ddea42811b9537c45a8580d69568f5eb8f80a1c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\3cf21254856bd31b3d960e869e81a90b240ab59b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_86b81c95ccdaf579d9515f623e45e1b91dfabfa1\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\e652289dd061edb37f065f6c1fd232b3d8c41af8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e81a90331089d2f9018e493b0fdd6bab92fae40c">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_e30c2201d3a47121d6721f8f92acce42d4876953.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\eef24a599edf4626cda25ca75cc734ffae487421\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="14e7bbfac64eed16949bc40146218dfc315c5a05">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_3f9d136b05c70f409e888dc9e8db61fc25662bff.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\worksapce\studio\SmileBuy\app\libs\libphonenumber-7.2.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="25574f7461320bba7f4c16a4345e011a37daa597">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\2\libphonenumber-7.2.3_92df6e5a93dbfafcc0eaed14abaa09bec93cc336\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\906b6beee14a5a13cae4ed6f2436b85d7566f2c0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6112185b04fc24474edb7b67c50cd82a45615e67\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\jackson-databind-2.2.2_34cebb7d9c0f05222a7630657f0a6116e850f5cd.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\732f6dc97f31f0d12ae18a6c5969f7110d423233\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a429575c564a25e3c1632058ee321da5b50acccf\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\350b48ec2ad8807ae61425c794561ff4adc79c4e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ad5bb101ced4d3939225c9b57e5a3d81547c1fbb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_59ed1f5b8d0a6845cb318f5509c3046ec509456d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\c5832f4b96e92f73d771d7379f07fe838a32f9ab\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de44758258139805d12d5d023b04f58e2010dacc">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e4a6343f1bdc142466acd5da114153c1f34af882\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\7776855c1b37cec81eaa3164dbb35528d0e5ced9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="611605b6b640c1558f9bdea41de8ff837ab68ca8">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_b81b0b117451bdb6e4da952921ce02757d930cae.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\56ddebcef36d6570436ec7f1ef8a95538c172a4a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_29af7cb869f66ccdcd80821408d49408b612ec49\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\fe4a7ebc295f3cd5fd9d5e331afe7f3ab99986c2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="814fc0c3ec69a944add398217d90077301501a74">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_97a262b84b4d33b519383d34920a90f5c88abf40\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-2.2.2_cdf2755fbc282bcba497937bfd17a11e2da6266e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\c92d46e2ad65ed8b5c6978dd9b70bff01b826ff2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="82a2a700e50e450944ce26f31ae9fbebaf53d7eb">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/me.iwf.photopicker-PhotoPicker-0.2.9_821e4ae77be9104d889d6d01225036af8c699865.jar" />
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ff9f9d0ae83f8ddc9f1ff4970b85dd4ebe20ca50\classes.dex" />
     </item>
     <item
-        jar="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/libs/libphonenumber-7.2.3.jar"
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\cde10d5f024b7fa699f4690cf132c78ece9e855f\output\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_5dd409eb1bc69dfbc63dc42ddc02cf5df0ef4db8.jar" />
+    </item>
+    <item
+        jar="D:\worksapce\studio\SmileBuy\app\libs\libphonenumber-7.2.3.jar"
+        jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="25574f7461320bba7f4c16a4345e011a37daa597">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/libphonenumber-7.2.3_933fabb1bc174a1e33b899b340df1fceac4c8e3f.jar" />
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\libphonenumber-7.2.3_92df6e5a93dbfafcc0eaed14abaa09bec93cc336.jar" />
     </item>
     <item
-        jar="/Users/evilstorm/.gradle/caches/modules-2/files-2.1/com.squareup/otto/1.3.7/69d90fd7fb70e54746e26c10454c220e40a775ce/otto-1.3.7.jar"
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognito\2.2.22\9bef9beddb1b7579713905702d8219d516bd3954\aws-android-sdk-cognito-2.2.22.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9bef9beddb1b7579713905702d8219d516bd3954">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-cognito-2.2.22_7ef07b2b3281450968f4fc615779488f11ef7135\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\f04d120cd8c97bd19e2f20026c38c7ab07e2a1da\output\jars\classes.jar"
         jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_8085f71de1b19235fd88f7703e0591d146d78ce9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\c7b1ac511a8459c685eb4ceb0347b42904f8c042\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_1316d5528a39fac6b2e58d86e291f77d8bf3bf14.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\jackson-core-2.2.2_cdf2755fbc282bcba497937bfd17a11e2da6266e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\514fd30de351e07e859cea57a2687948554e1d6a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_bd69b24cc6507c43dbfcd70d2058d008df60ad31\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\dee7f80eddefa93d38d20f9534b96b1fdf1ef426\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9af3b9b8114e685291aa00e6572b0a9131244956">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_b445d713633f6b2f7bf3a4b109cdc44cb2dbceb9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.2.2_3f36bdc4e3c1814b9dee5e0d90f4077ea814d37a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\59ce617a5fc25026f96ddfbfd9d986ab72af260a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_8f0babe3d80e3299c5647a671480ef12ea6b4ad9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\otto-1.3.7_ddd9153220d7518eb6582ddf18fe6418967525a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\2fcaa3b3f99411ded6ace144db4935a4a4e12fb4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="890be6e1e56a883c9b407a11e067a61886dec123">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_430d3ec98b11c7aa2edb01bf85c5129e4c178f64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-1.0.19_78f0bb23743784ba5177d1b9659f6fa6d6a7bd06\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\23cb2ae9c6c84c9464424410db1f39a95d6c0db4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dfca57c74eb48c4ad490a485c446037143d85411\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_dd460f45d27a359687729c3c169358b1eda3100b\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\library-1.0.19_78f0bb23743784ba5177d1b9659f6fa6d6a7bd06.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.navercorp.volleyextensions\volleyer\2.0.0\b99d1aa16ba8f3d30e41ae270707b38ceea4f31a\volleyer-2.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b99d1aa16ba8f3d30e41ae270707b38ceea4f31a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\volleyer-2.0.0_5ec55a3836951d1771d7f1a2374712b19ffe5937.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.navercorp.volleyextensions\volleyer\2.0.0\b99d1aa16ba8f3d30e41ae270707b38ceea4f31a\volleyer-2.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b99d1aa16ba8f3d30e41ae270707b38ceea4f31a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\volleyer-2.0.0_5ec55a3836951d1771d7f1a2374712b19ffe5937\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\3959582c319d6881cdc83e3964eb37b1385c67b0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a5db9a2dd46d84285ef737f65030b74b6e8ee2a4">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_8329208a833a9498bb4da11497e3d62de89d0d0c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\350b48ec2ad8807ae61425c794561ff4adc79c4e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ad5bb101ced4d3939225c9b57e5a3d81547c1fbb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_59ed1f5b8d0a6845cb318f5509c3046ec509456d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-s3\2.2.22\40fe82092e0ae3ca549b132a1e7e876807525176\aws-android-sdk-s3-2.2.22.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="40fe82092e0ae3ca549b132a1e7e876807525176">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-s3-2.2.22_cb55fc2c4f122a63f4f986f3a33501c5c1e1dc9d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\library-2.4.0_dd460f45d27a359687729c3c169358b1eda3100b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\56ddebcef36d6570436ec7f1ef8a95538c172a4a\output\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.3.0_d7ad3d641334ba1b25cd302f6f42e13495d19913\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.0\a7537446a030da8eb0da4c71424d16c2589f6c4a\glide-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.6.0_660a6f025f5601321e88b4acb58e9f0734e3c85e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\f926c5bf9b52122842804912331509066b174b2a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3dab44cceb661a8aa507ff12392a9c243feb75c4\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\jackson-databind-2.2.2_34cebb7d9c0f05222a7630657f0a6116e850f5cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\eb9098a6d559d14b2ba0f046e8e45186439c1357\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8c6ebb7d087d1a30bf84356bd2aecf85309fc024">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_f6562bb3b348ece55c870ea182ee6ff625d69e96.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\eef24a599edf4626cda25ca75cc734ffae487421\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="14e7bbfac64eed16949bc40146218dfc315c5a05">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3f9d136b05c70f409e888dc9e8db61fc25662bff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\e652289dd061edb37f065f6c1fd232b3d8c41af8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e81a90331089d2f9018e493b0fdd6bab92fae40c">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e30c2201d3a47121d6721f8f92acce42d4876953\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\7a48725884bad7f19655029084a7a0520bf5957a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_3ddea42811b9537c45a8580d69568f5eb8f80a1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\3cf21254856bd31b3d960e869e81a90b240ab59b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_86b81c95ccdaf579d9515f623e45e1b91dfabfa1.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.2.22\c6789de00db9d1f93faec881fa0c1f5960fb8a15\aws-android-sdk-core-2.2.22.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c6789de00db9d1f93faec881fa0c1f5960fb8a15">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-core-2.2.22_c294d5bf13c6a0e864ca120df3789a96bb326bae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\worksapce\studio\SmileBuy\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6da1be5ca8c7de6ed44896c038496356209b2b08">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b4d89ac124b816180e64bb6e6fe2b9a230002094\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\732f6dc97f31f0d12ae18a6c5969f7110d423233\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_a429575c564a25e3c1632058ee321da5b50acccf.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\7008f04266886e45f7052d69f609e7dd03677e8a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5f139137f3fb5e107e304a7c6dfe349fe8d67cea\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\1e6cc98bb622747f0006ae222502a621ebc13922\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c9ef45dcbd082cd63aac09a5e2cd443adb5df837">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_6dd4c98487bd412f87fbb6612f00c226b73ae705.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\906b6beee14a5a13cae4ed6f2436b85d7566f2c0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_6112185b04fc24474edb7b67c50cd82a45615e67.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\worksapce\studio\SmileBuy\app\libs\libphonenumber-7.2.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="25574f7461320bba7f4c16a4345e011a37daa597">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\libphonenumber-7.2.3_92df6e5a93dbfafcc0eaed14abaa09bec93cc336.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidSDK\Studio\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_09d01dc463b5153e615ead663d1a0cb0c81ac7f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\56ddebcef36d6570436ec7f1ef8a95538c172a4a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_29af7cb869f66ccdcd80821408d49408b612ec49.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\worksapce\studio\SmileBuy\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_c5b5a883d7ead4144f4c101e08103cbdcef6cd68\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\c92d46e2ad65ed8b5c6978dd9b70bff01b826ff2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="82a2a700e50e450944ce26f31ae9fbebaf53d7eb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_ff9f9d0ae83f8ddc9f1ff4970b85dd4ebe20ca50.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\c5832f4b96e92f73d771d7379f07fe838a32f9ab\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de44758258139805d12d5d023b04f58e2010dacc">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_e4a6343f1bdc142466acd5da114153c1f34af882.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\jackson-core-2.2.2_cdf2755fbc282bcba497937bfd17a11e2da6266e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\fe4a7ebc295f3cd5fd9d5e331afe7f3ab99986c2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="814fc0c3ec69a944add398217d90077301501a74">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_97a262b84b4d33b519383d34920a90f5c88abf40.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\cde10d5f024b7fa699f4690cf132c78ece9e855f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5dd409eb1bc69dfbc63dc42ddc02cf5df0ef4db8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\f04d120cd8c97bd19e2f20026c38c7ab07e2a1da\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8085f71de1b19235fd88f7703e0591d146d78ce9\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\514fd30de351e07e859cea57a2687948554e1d6a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_bd69b24cc6507c43dbfcd70d2058d008df60ad31.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="false"
+        optimize="true"
         revision="23.0.3"
         sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
-        <dex dex="/Users/evilstorm/Workspace/Android/SmileBuy - 20161003/app/build/intermediates/pre-dexed/release/otto-1.3.7_eefab42f20e5abcdd47d834aaead9a061f13dbfb.jar" />
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\otto-1.3.7_ddd9153220d7518eb6582ddf18fe6418967525a7.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\c7b1ac511a8459c685eb4ceb0347b42904f8c042\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1316d5528a39fac6b2e58d86e291f77d8bf3bf14\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\otto-1.3.7_ddd9153220d7518eb6582ddf18fe6418967525a7.jar" />
+    </item>
+    <item
+        jar="D:\AndroidSDK\Studio\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_09d01dc463b5153e615ead663d1a0cb0c81ac7f4.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\59ce617a5fc25026f96ddfbfd9d986ab72af260a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8f0babe3d80e3299c5647a671480ef12ea6b4ad9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-annotations-2.2.2_3f36bdc4e3c1814b9dee5e0d90f4077ea814d37a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\dee7f80eddefa93d38d20f9534b96b1fdf1ef426\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9af3b9b8114e685291aa00e6572b0a9131244956">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b445d713633f6b2f7bf3a4b109cdc44cb2dbceb9\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0_ede0b8a94af6cb01cdff1f06032d95338df7c93c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\2fcaa3b3f99411ded6ace144db4935a4a4e12fb4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="890be6e1e56a883c9b407a11e067a61886dec123">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_430d3ec98b11c7aa2edb01bf85c5129e4c178f64.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.0\a7537446a030da8eb0da4c71424d16c2589f6c4a\glide-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\glide-3.6.0_660a6f025f5601321e88b4acb58e9f0734e3c85e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb\2.2.22\a1e0dd0d91d40d9e67342d3a8bd26f08edaa3549\aws-android-sdk-ddb-2.2.22.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a1e0dd0d91d40d9e67342d3a8bd26f08edaa3549">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-ddb-2.2.22_443945d3d54f9bf41c93053fd1d7870e3ced3020\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\23cb2ae9c6c84c9464424410db1f39a95d6c0db4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\pre-dexed\debug\classes_dfca57c74eb48c4ad490a485c446037143d85411.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\7776855c1b37cec81eaa3164dbb35528d0e5ced9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="611605b6b640c1558f9bdea41de8ff837ab68ca8">
+        <dex dex="D:\worksapce\studio\SmileBuy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b81b0b117451bdb6e4da952921ce02757d930cae\classes.dex" />
     </item>
 
 </items>

@@ -4,8 +4,8 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.1/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/fe4a7ebc295f3cd5fd9d5e331afe7f3ab99986c2/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/fe4a7ebc295f3cd5fd9d5e331afe7f3ab99986c2/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
