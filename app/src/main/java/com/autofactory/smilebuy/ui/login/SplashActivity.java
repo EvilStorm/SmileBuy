@@ -100,12 +100,12 @@ public class SplashActivity extends NormalActivity {
                 ServerRequest.get().requestLogin(mFaceToken, new Response.Listener<LoginResult>() {
                     @Override
                     public void onResponse(LoginResult response) {
-                        if (response.isSuccess()) {
+//                        if (response.isSuccess()) {
                             startActivity(new Intent(SplashActivity.this, MainActivity.class));
                             finish();
-                        } else {
-                            moveToLoginActivity(true);
-                        }
+//                        } else {
+//                            moveToLoginActivity(true);
+//                        }
                     }
                 }, true);
             } else {
@@ -115,20 +115,24 @@ public class SplashActivity extends NormalActivity {
                     ServerRequest.get().requestLogin(email, pwd, new Response.Listener<LoginResult>() {
                         @Override
                         public void onResponse(LoginResult response) {
-                            if (response.isSuccess()) {
+//                            if (response.isSuccess()) {
                                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                                 finish();
-                            } else {
-                                moveToLoginActivity(true);
-                            }
+//                            } else {
+//                                moveToLoginActivity(true);
+//                            }
                         }
                     }, true);
                 }else{
-                    moveToLoginActivity(false);
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                    finish();
+//                    moveToLoginActivity(false);
                 }
             }
         } else {
-            moveToLoginActivity(false);
+            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            finish();
+//            moveToLoginActivity(false);
         }
     }
 

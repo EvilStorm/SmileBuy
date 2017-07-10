@@ -54,6 +54,12 @@ public class CarDetailActivity extends FragmentActivity {
         findViewById(R.id.favorite).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
+
                 ServerRequest.get().requestCarFavorite(mCarData.getID(), new Response.Listener<CarFavoriteResult>() {
                     @Override
                     public void onResponse(CarFavoriteResult response) {

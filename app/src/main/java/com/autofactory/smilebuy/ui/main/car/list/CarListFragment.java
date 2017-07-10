@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcelable;
-
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,22 +18,21 @@ import android.widget.TextView;
 
 import com.autofactory.smilebuy.R;
 import com.autofactory.smilebuy.application.Application;
-import com.autofactory.smilebuy.data.model.CarData;
-import com.autofactory.smilebuy.data.server.ServerRequest;
-import com.autofactory.smilebuy.ui.main.car.detail.CarDetailActivity;
-import com.autofactory.smilebuy.ui.main.car.register.RegisterCarActivity;
 import com.autofactory.smilebuy.component.Fragment;
 import com.autofactory.smilebuy.component.FragmentActivity;
 import com.autofactory.smilebuy.component.OnScrollListener;
+import com.autofactory.smilebuy.data.model.CarData;
+import com.autofactory.smilebuy.ui.main.car.detail.CarDetailActivity;
+import com.autofactory.smilebuy.ui.main.car.register.RegisterCarActivity;
 import com.autofactory.smilebuy.util.Constant;
 import com.autofactory.smilebuy.util.Log;
+import com.autofactory.smilebuy.util.Utility;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.melnykov.fab.FloatingActionButton;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 
@@ -188,6 +185,11 @@ public class CarListFragment extends Fragment {
         mSell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
                 Intent intent = new Intent(getActivity(), RegisterCarActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.anim_in_from_bottom, R.anim.anim_stay);

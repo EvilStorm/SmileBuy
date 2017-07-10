@@ -52,6 +52,12 @@ public class SettingFragment extends Fragment {
         findViewById(R.id.setting).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
                 Intent intent = new Intent(getActivity(), SettingSettingActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.anim_in_from_bottom, R.anim.anim_stay);
@@ -61,6 +67,13 @@ public class SettingFragment extends Fragment {
         findViewById(R.id.myProfile).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
+
                 Intent intent = new Intent(getActivity(), UserProfileActivity.class);
                 intent.putExtra(UserProfileActivity.USER_DATA_SIMPLE, Application.get().getUserData());
                 startActivity(intent);
@@ -99,6 +112,12 @@ public class SettingFragment extends Fragment {
         findViewById(R.id.myFavorite).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
                 Intent intent = new Intent(getActivity(), MyFavoriteCarActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.anim_in_from_right, R.anim.anim_stay);
@@ -117,6 +136,12 @@ public class SettingFragment extends Fragment {
         findViewById(R.id.myCar).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
                 Intent intent = new Intent(getActivity(), MyCarActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.anim_in_from_right, R.anim.anim_stay);
@@ -126,6 +151,12 @@ public class SettingFragment extends Fragment {
         findViewById(R.id.myRequest).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
                 Intent intent = new Intent(getActivity(), MyRequestActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.anim_in_from_right, R.anim.anim_stay);

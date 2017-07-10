@@ -829,7 +829,7 @@ public class ServerRequest {
     public void requestCarList(int page, long offsetCarID, final Response.Listener<CarListResult> listener) {
         Utility.showProgressDialog(Application.get().getActivity());
         PostBuilder postBuilder = Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CAR_LIST))
-                .addStringPart("login_token", Application.get().getLoginToken())
+//                .addStringPart("login_token", Application.get().getLoginToken())
                 .addStringPart("page", "" + page);
         if (offsetCarID > 0) {
             postBuilder = postBuilder.addStringPart("offset_car_id", "" + offsetCarID);

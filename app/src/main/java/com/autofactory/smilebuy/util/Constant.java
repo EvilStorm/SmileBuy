@@ -6,7 +6,7 @@ package com.autofactory.smilebuy.util;
 public class Constant {
 
     private static final boolean IS_TEST = false;
-    public static final boolean IS_PLAY_STORE_UPDATE = true;
+    public static final boolean IS_PLAY_STORE_UPDATE = false;
 
     public static final String URQA_API_KEY = "CFD9819F";
     public static final String SMS_RECEIVE_SENDER = "0318556890";
@@ -26,7 +26,7 @@ public class Constant {
 //    private static final String SERVER_ADDRESS = "http://api.autofactory.or.kr";
     //스마일바이 SpringBoot Server
     private static final String SERVER_ADDRESS = "http://smilebuy.ap-northeast-2.elasticbeanstalk.com";
-    private static final String TEST_SERVER_ADDRESS = "http://192.168.0.4:8080";
+    private static final String TEST_SERVER_ADDRESS = "http://192.168.0.3:8080";
 
     public static String getServerUrl() {
         if(IS_TEST){

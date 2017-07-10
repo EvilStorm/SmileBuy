@@ -1,10 +1,8 @@
 package com.autofactory.smilebuy.util;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -29,15 +27,16 @@ import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.autofactory.smilebuy.R;
+import com.autofactory.smilebuy.application.Application;
+import com.autofactory.smilebuy.ui.login.LoginActivity;
+import com.autofactory.smilebuy.util.popup.PopupBase;
 import com.autofactory.smilebuy.util.popup.PopupMakeInterview;
 import com.autofactory.smilebuy.util.popup.PopupOneButton;
-import com.autofactory.smilebuy.util.popup.PopupBase;
 import com.autofactory.smilebuy.util.popup.PopupTwoButton;
 import com.google.i18n.phonenumbers.Phonenumber;
 
@@ -497,6 +496,22 @@ public class Utility {
         popup.setTwoButtonListener(noClickListener);
         popup.show();
     }
+
+    public static void showLoginPop() {
+        showPopupYesOrNo(Application.get().getActivity(), Application.get().getString(R.string.popup_message_require_lgin), new PopupBase.OnClickListener() {
+            @Override
+            public void onClick() {
+                Application.get().getActivity().startActivity(new Intent(Application.get().getActivity(), LoginActivity.class));
+                Application.get().getActivity().finish();
+            }
+        }, new PopupBase.OnClickListener() {
+            @Override
+            public void onClick() {
+
+            }
+        });
+    }
+
 
 //    public static void showAlertDialog(NormalActivity activity, String message) {
 //        AlertDialog dialog = new AlertDialog.Builder(activity)

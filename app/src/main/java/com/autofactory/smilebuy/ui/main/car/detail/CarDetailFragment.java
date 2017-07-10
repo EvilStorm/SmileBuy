@@ -203,6 +203,12 @@ public class CarDetailFragment extends Fragment {
         comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
                 Intent i = new Intent(getActivity(), CommentActivity.class);
                 i.putExtra(Constant.DATA_CAR_DATA, mCarData);
                 getActivity().startActivityForResult(i, CarDetailActivity.ACTIVITY_REQUEST_CODE_COMMENT);
@@ -226,6 +232,13 @@ public class CarDetailFragment extends Fragment {
         call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
+
                 if(getActivity().checkCallingOrSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
                     Intent i = new Intent(Intent.ACTION_CALL);
                     i.setData(Uri.parse(String.format("tel:%s", mCarData.getUser().getMobileNum())));
@@ -244,6 +257,13 @@ public class CarDetailFragment extends Fragment {
         sms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(Application.get().getLoginToken() == null) {
+                    Utility.showLoginPop();
+                    return;
+                }
+
+
                 getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + mCarData.getUser().getMobileNum())));
                 Application.get().setGAEvent(Constant.GoogleAnalytic.EVENT_CATEGORY_CONTACT,
                         Constant.GoogleAnalytic.EVENT_ACTION_SMS,
