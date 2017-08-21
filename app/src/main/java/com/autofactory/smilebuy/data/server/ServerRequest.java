@@ -285,23 +285,19 @@ public class ServerRequest {
         //rr.cancel();
     }
 
-    public void requestLogin(String email, String password, final Response.Listener<LoginResult> listener, boolean autoLogin) {
-        if(!autoLogin) {
-            Utility.showProgressDialog(Application.get().getActivity());
-        }
-        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_LOGIN))
-                .addStringPart("client_os", Constant.getMarketType())
-                .addStringPart("client_version", "" + Application.get().getVersion())
-                .addStringPart("email", email)
-                .addStringPart("password", password)
+    public void requestUpdate(final Response.Listener<LoginResult> listener) {
+        StringBuffer url = new StringBuffer();
+        url.append(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_CHECK_UPDATE));
+        url.append(Constant.getMarketType());
+        url.append("/" + Application.get().getVersion());
+
+        Volleyer.volleyer().get(url.toString())
                 .withTargetClass(LoginResult.class)
                 .withListener(new Response.Listener<LoginResult>() {
                     @Override
                     public void onResponse(final LoginResult response) {
-                        Utility.hideProgressDialog();
                         if (response.isSuccess()) {
-                            Application.get().setFacebookToken(null);
-                            Application.get().onLoginSuccess(response.getLoginToken(), response.getUserData(), response.getClientVersion(), response.getClientUpdateURL());
+                            Application.get().setUpdateInfo(response.getClientVersion(), response.getClientUpdateURL());
                             if (Application.get().isThereUpdateExist()) {
                                 Utility.showPopupYesOrNo(Application.get().getActivity(), Application.get().getString(R.string.popup_message_there_is_update), new PopupBase.OnClickListener() {
                                     @Override
@@ -335,6 +331,36 @@ public class ServerRequest {
                                     listener.onResponse(response);
                                 }
                             }
+                        }
+                    }
+                }).execute();
+    }
+
+    public void requestLogin(String email, String password, final Response.Listener<LoginResult> listener, boolean autoLogin) {
+        if(!autoLogin) {
+            Utility.showProgressDialog(Application.get().getActivity());
+        }
+        Volleyer.volleyer().post(String.format("%s%s", Constant.getServerUrl(), Constant.SERVER_REQ_LOGIN))
+                .addStringPart("client_os", Constant.getMarketType())
+                .addStringPart("client_version", "" + Application.get().getVersion())
+                .addStringPart("email", email)
+                .addStringPart("password", password)
+                .withTargetClass(LoginResult.class)
+                .withListener(new Response.Listener<LoginResult>() {
+                    @Override
+                    public void onResponse(final LoginResult response) {
+                        Utility.hideProgressDialog();
+                        if (response.isSuccess()) {
+                            Application.get().setFacebookToken(null);
+                            Application.get().onLoginSuccess(response.getLoginToken(), response.getUserData(), response.getClientVersion(), response.getClientUpdateURL());
+                                if (listener != null) {
+                                    listener.onResponse(response);
+                                }
+                        } else {
+                                mServerErrorListener.onResponse(response);
+                                if (listener != null) {
+                                    listener.onResponse(response);
+                                }
                         }
                     }
                 })

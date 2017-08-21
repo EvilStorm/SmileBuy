@@ -1,7 +1,6 @@
 package com.autofactory.smilebuy.ui.login;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -17,6 +16,8 @@ import com.autofactory.smilebuy.data.server.ServerRequest;
 import com.autofactory.smilebuy.ui.main.MainActivity;
 import com.autofactory.smilebuy.util.Constant;
 import com.autofactory.smilebuy.util.Log;
+import com.autofactory.smilebuy.util.Utility;
+import com.autofactory.smilebuy.util.popup.PopupBase;
 import com.facebook.AccessToken;
 import com.facebook.FacebookSdk;
 import com.gun0912.tedpermission.PermissionListener;
@@ -36,11 +37,30 @@ public class SplashActivity extends NormalActivity {
 
         // Init Facebook
         FacebookSdk.sdkInitialize(getApplicationContext());
+        Application.get().getVersionInfo();
+        checkUpdate();
 
-        checkPermissions();
-
-        verifyStoragePermissions();
     }
+
+    private void checkUpdate() {
+        ServerRequest.get().requestUpdate(new Response.Listener<LoginResult>() {
+            @Override
+            public void onResponse(LoginResult response) {
+                if(response.isSuccess()){
+                    checkPermissions();
+                    verifyStoragePermissions();
+                } else {
+                    Utility.showPopupOk(Application.get().getActivity(), response.getErrorMessage(), new PopupBase.OnClickListener() {
+                        @Override
+                        public void onClick() {
+                            finish();
+                        }
+                    });
+                }
+            }
+        });
+    }
+
 
     private void checkPermissions() {
         PermissionListener permissionListener = new PermissionListener() {

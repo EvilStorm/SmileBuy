@@ -223,6 +223,11 @@ public class Application extends android.app.Application {
         }
     }
 
+    public void setUpdateInfo(int latestVersion, String versionUpdateURL) {
+        mLatestVersion = latestVersion;
+        mVersionUpdateURL = versionUpdateURL;
+    }
+
     public void onLoginSuccess(String loginToken, UserData userData, int latestVersion, String versionUpdateURL) {
         mLoginToken = loginToken;
         mUserData = userData;
@@ -364,6 +369,23 @@ public class Application extends android.app.Application {
         _singleton = this;
     }
 
+    public int getVersionInfo() {
+        mVersion = 0;
+        try {
+            String[] versions = getPackageManager().getPackageInfo(getPackageName(), 0).versionName.split("\\.");
+            for (int i = 0; i < versions.length; i++) {
+                int v = Utility.parseInt(versions[i]);
+                for (int j = versions.length - 1; j > i; j--) {
+                    v *= 10;
+                }
+                mVersion += v;
+            }
+        } catch (Exception e) {
+            mVersion = 1;
+            e.printStackTrace();
+        }
+        return mVersion;
+    }
     public void initAfterGotPermissions() {
         mVersion = 0;
         try {

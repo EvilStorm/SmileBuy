@@ -5,7 +5,7 @@ package com.autofactory.smilebuy.util;
  */
 public class Constant {
 
-    private static final boolean IS_TEST = false;
+    private static final boolean IS_TEST = true;
     public static final boolean IS_PLAY_STORE_UPDATE = false;
 
     public static final String URQA_API_KEY = "CFD9819F";
@@ -52,6 +52,7 @@ public class Constant {
     public static final String SERVER_REQ_REGISTER = "/user/register/";
     public static final String SERVER_REQ_VERIFY_PHONE = "/user/mobile_auth/request/";
     public static final String SERVER_REQ_CHECK_SECRET = "/user/mobile_auth/check/";
+    public static final String SERVER_REQ_CHECK_UPDATE = "/update/";
     public static final String SERVER_REQ_LOGIN = "/user/login/";
     public static final String SERVER_REQ_FIND_PW = "/user/find_pw/";
     public static final String SERVER_REQ_WITHDRAW = "/user/unregister/";
