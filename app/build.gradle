@@ -12,14 +12,14 @@ apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.3'
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.autofactory.smilebuy"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 13
-        versionName "0.9.8"
+        versionCode 14
+        versionName "0.9.9"
 
         resConfig "ko"
         multiDexEnabled true
@@ -47,6 +47,7 @@ repositories {
     mavenCentral()
     maven { url 'https://maven.fabric.io/public' }
     maven { url "https://jitpack.io" }
+    google()
 }
 
 
